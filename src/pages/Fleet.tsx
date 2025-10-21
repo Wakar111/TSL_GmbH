@@ -30,10 +30,10 @@ export default function Fleet() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-r from-teal-700 to-teal-600 text-white py-16">
+      <section className="bg-gradient-to-r from-gray-800 to-gray-700 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Unser Fuhrpark</h1>
-          <p className="text-xl text-teal-100">
+          <p className="text-xl text-gray-300">
             Moderne Fahrzeuge für alle Ihre Transportbedürfnisse
           </p>
         </div>
@@ -55,10 +55,10 @@ export default function Fleet() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {vehicles.map((vehicle, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="bg-teal-600 p-6 flex items-center justify-between">
+                <div className="bg-gray-700 p-6 flex items-center justify-between">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{vehicle.type}</h3>
-                    <p className="text-teal-100 text-lg">{vehicle.count} Fahrzeuge</p>
+                    <p className="text-gray-300 text-lg">{vehicle.count} Fahrzeuge</p>
                   </div>
                   <vehicle.icon className="w-16 h-16 text-white opacity-80" />
                 </div>
@@ -67,7 +67,7 @@ export default function Fleet() {
                   <ul className="space-y-2">
                     {vehicle.specs.map((spec, idx) => (
                       <li key={idx} className="flex items-start">
-                        <span className="text-teal-600 mr-2">•</span>
+                        <span className="text-gray-700 mr-2">•</span>
                         <span className="text-gray-700">{spec}</span>
                       </li>
                     ))}

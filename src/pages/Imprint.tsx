@@ -1,7 +1,7 @@
 export default function Imprint() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-r from-teal-700 to-teal-600 text-white py-16">
+      <section className="bg-gradient-to-r from-gray-800 to-gray-700 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold">Impressum</h1>
         </div>

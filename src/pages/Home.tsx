@@ -23,18 +23,18 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 text-white py-20">
+      <section className="bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Ihr Partner für Transport & Logistik
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-teal-100">
+            <p className="text-xl md:text-2xl mb-8 text-gray-300">
               Mit 65 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
             </p>
             <a
               href="#contact"
-              className="inline-block bg-white text-teal-700 font-semibold px-8 py-4 rounded-lg hover:bg-teal-50 transition-colors text-lg"
+              className="inline-block bg-white text-gray-800 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg"
             >
               Jetzt Kontakt aufnehmen
             </a>
@@ -46,22 +46,22 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="p-6">
-              <Users className="w-12 h-12 mx-auto mb-4 text-teal-600" />
+              <Users className="w-12 h-12 mx-auto mb-4 text-gray-700" />
               <h3 className="text-3xl font-bold text-gray-800 mb-2">65</h3>
               <p className="text-gray-600">Mitarbeiter</p>
             </div>
             <div className="p-6">
-              <Truck className="w-12 h-12 mx-auto mb-4 text-teal-600" />
+              <Truck className="w-12 h-12 mx-auto mb-4 text-gray-700" />
               <h3 className="text-3xl font-bold text-gray-800 mb-2">50+</h3>
               <p className="text-gray-600">Fahrzeuge</p>
             </div>
             <div className="p-6">
-              <MapPin className="w-12 h-12 mx-auto mb-4 text-teal-600" />
+              <MapPin className="w-12 h-12 mx-auto mb-4 text-gray-700" />
               <h3 className="text-3xl font-bold text-gray-800 mb-2">10+</h3>
               <p className="text-gray-600">Standorte</p>
             </div>
             <div className="p-6">
-              <Award className="w-12 h-12 mx-auto mb-4 text-teal-600" />
+              <Award className="w-12 h-12 mx-auto mb-4 text-gray-700" />
               <h3 className="text-3xl font-bold text-gray-800 mb-2">20+</h3>
               <p className="text-gray-600">Jahre Erfahrung</p>
             </div>
@@ -100,7 +100,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {services.map((service, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
-                <service.icon className="w-12 h-12 mb-4 text-teal-600" />
+                <service.icon className="w-12 h-12 mb-4 text-gray-700" />
                 <h3 className="text-xl font-bold mb-3 text-gray-800">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.description}</p>
               </div>
@@ -125,15 +125,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-16 bg-teal-600 text-white">
+      <section id="contact" className="py-16 bg-gray-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Bereit für die Zusammenarbeit?</h2>
-          <p className="text-xl mb-8 text-teal-100">
+          <p className="text-xl mb-8 text-gray-300">
             Kontaktieren Sie uns noch heute und erfahren Sie, wie wir Ihre Logistik optimieren können.
           </p>
           <a
             href="/contact"
-            className="inline-block bg-white text-teal-700 font-semibold px-8 py-4 rounded-lg hover:bg-teal-50 transition-colors text-lg"
+            className="inline-block bg-white text-gray-800 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg"
           >
             Kontaktieren Sie uns
           </a>

@@ -45,10 +45,10 @@ export default function Jobs() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-r from-teal-700 to-teal-600 text-white py-16">
+      <section className="bg-gradient-to-r from-gray-800 to-gray-700 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Stellenangebote</h1>
-          <p className="text-xl text-teal-100">
+          <p className="text-xl text-gray-300">
             Werden Sie Teil unseres erfolgreichen Teams
           </p>
         </div>
@@ -76,20 +76,20 @@ export default function Jobs() {
                       <h3 className="text-2xl font-bold text-gray-800 mb-2">{job.title}</h3>
                       <div className="flex flex-wrap gap-4 text-sm text-gray-600">
                         <div className="flex items-center">
-                          <MapPin size={16} className="mr-1 text-teal-600" />
+                          <MapPin size={16} className="mr-1 text-gray-700" />
                           {job.location}
                         </div>
                         <div className="flex items-center">
-                          <Clock size={16} className="mr-1 text-teal-600" />
+                          <Clock size={16} className="mr-1 text-gray-700" />
                           {job.type}
                         </div>
                         <div className="flex items-center">
-                          <Euro size={16} className="mr-1 text-teal-600" />
+                          <Euro size={16} className="mr-1 text-gray-700" />
                           {job.salary}
                         </div>
                       </div>
                     </div>
-                    <BriefcaseIcon className="w-12 h-12 text-teal-600 hidden md:block" />
+                    <BriefcaseIcon className="w-12 h-12 text-gray-700 hidden md:block" />
                   </div>
 
                   <p className="text-gray-700 mb-4 leading-relaxed">{job.description}</p>
@@ -99,14 +99,14 @@ export default function Jobs() {
                     <ul className="space-y-1">
                       {job.requirements.map((req, idx) => (
                         <li key={idx} className="flex items-start">
-                          <span className="text-teal-600 mr-2">✓</span>
+                          <span className="text-gray-700 mr-2">✓</span>
                           <span className="text-gray-700">{req}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <button className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
+                  <button className="bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                     Jetzt bewerben
                   </button>
                 </div>
@@ -125,7 +125,7 @@ export default function Jobs() {
             </p>
             <a
               href="/contact"
-              className="inline-block bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+              className="inline-block bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
             >
               Initiativbewerbung senden
             </a>
