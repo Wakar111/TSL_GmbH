@@ -7,7 +7,7 @@ export default function Header() {
   const location = useLocation();
 
   const navLinks = [
-    { path: '/', label: 'Über uns' },
+    { path: '/', label: 'Home' },
     { path: '/fleet', label: 'Fuhrpark' },
     { path: '/jobs', label: 'Stellenangebote' },
     { path: '/contact', label: 'Kontakt' },
