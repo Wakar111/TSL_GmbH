@@ -23,13 +23,22 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative text-white py-20 overflow-hidden">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/Hero-Section.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Ihr Partner für Transport & Logistik
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-300">
+            <p className="text-xl md:text-2xl mb-8 text-gray-200">
               Mit 65 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
             </p>
             <a
