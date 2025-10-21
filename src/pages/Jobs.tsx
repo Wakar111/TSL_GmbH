@@ -1,4 +1,5 @@
 import { BriefcaseIcon, MapPin, Clock, Euro } from 'lucide-react';
+import DragShuffleHero from '../components/DragShuffleHero';
 
 export default function Jobs() {
   const jobListings = [
@@ -45,14 +46,8 @@ export default function Jobs() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-r from-gray-800 to-gray-700 text-white py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Stellenangebote</h1>
-          <p className="text-xl text-gray-300">
-            Werden Sie Teil unseres erfolgreichen Teams
-          </p>
-        </div>
-      </section>
+      <DragShuffleHero />
+
 
       <section className="py-16">
         <div className="container mx-auto px-4">
