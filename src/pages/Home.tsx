@@ -1,7 +1,14 @@
 import { Truck, Users, MapPin, Award, Package, Clock } from 'lucide-react';
 
 export default function Home() {
-  const partners = ['REWE', 'PENNY', 'TOOM', 'Scania'];
+  const partners = [
+    { name: 'REWE', logo: '/Firmen-Logos/REWE.png', className: 'h-12' },
+    { name: 'PENNY', logo: '/Firmen-Logos/PENNY.png', className: 'h-12' },
+    { name: 'TOOM', logo: '/Firmen-Logos/TOOM.png', className: 'h-12' },
+    { name: 'SCANIA', logo: '/Firmen-Logos/SCANIA.png', className: 'h-12' },
+    { name: '4media', logo: '/Firmen-Logos/4media.png', className: 'h-12' },
+    { name: 'ECK', logo: '/Firmen-Logos/ECK.png', className: 'h-12' },
+  ];
 
   const services = [
     {
@@ -23,6 +30,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <style>{`
+        @keyframes partner-scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
       <section className="relative text-white py-20 overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -121,15 +134,22 @@ export default function Home() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Unsere Partner</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-lg shadow-md flex items-center justify-center hover:shadow-lg transition-shadow"
-              >
-                <span className="text-2xl font-bold text-gray-700">{partner}</span>
-              </div>
-            ))}
+          <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <div
+              className="flex w-max gap-12 items-center"
+              style={{ animation: 'partner-scroll 30s linear infinite' }}
+            >
+              {[...partners, ...partners].map((partner, index) => (
+                <div key={index} className="shrink-0">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className={`h-10 md:h-12 w-auto object-contain grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition duration-300`}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
