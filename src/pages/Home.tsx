@@ -1,4 +1,4 @@
-import { Truck, Users, MapPin, Award, Package, Clock } from 'lucide-react';
+import { Truck, Users, MapPin, Award, CheckCircle, ArrowRight, Box, Cpu, ShieldCheck, BarChart2, Target, Clock as ClockIcon, Wrench, Shield, RefreshCw, Layers } from 'lucide-react';
 
 export default function Home() {
   const partners = [
@@ -10,23 +10,43 @@ export default function Home() {
     { name: 'ECK', logo: '/Firmen-Logos/ECK.png', className: 'h-12' },
   ];
 
-  const services = [
+  const mediaItems = [
     {
-      icon: Package,
-      title: 'Logistikpakete',
-      description: 'Individuelle Logistiklösungen für Ihre Bedürfnisse',
-    },
-    {
-      icon: Truck,
-      title: 'Transportkapazitäten',
-      description: 'Moderne Flotte für sichere und pünktliche Lieferungen',
-    },
-    {
-      icon: Clock,
-      title: 'Frische-Logistik',
-      description: 'Spezialisiert auf temperaturgeführte Transporte',
+      title: 'Sicherheit hat bei uns oberste Priorität.',
+      description:
+        'Jeder Handgriff zählt – vom ersten Check bis zur letzten Lieferung. Mit Erfahrung, Präzision und Verantwortungsbewusstsein sorgen wir dafür, dass Menschen, Fahrzeuge und Waren sicher und zuverlässig ans Ziel gelangen.',
+      media: { type: 'video' as const, src: '/Videos/Abschnitt-1.mp4', alt: 'Fahrereinweisung' },
     },
   ];
+
+  const servicesList = [
+    {
+      title: 'NUTZUNGSPAKETE',
+      icon: Box,
+      features: [
+        { text: 'Schneller Lagerumschlag (24 Std. im Umkreis von 100 km)', icon: ClockIcon },
+        { text: 'Einsatz modernster Technik', icon: Cpu },
+        { text: 'Unser Equipment genügt höchsten logistischen Ansprüchen', icon: ShieldCheck },
+        { text: 'Exzellenter Qualitätsstandard', icon: Award },
+        { text: 'Ladekapazitätserhöhung von 55% durch Doppeldecker-Lastzüge', icon: Layers },
+      ],
+    },
+    {
+      title: 'LEISTUNGSMERKMALE',
+      icon: Target,
+      features: [
+        { text: 'Individuelle Erstellung logistischer Konzepte gemäß dem Anforderungsprofil des Kunden', icon: Wrench },
+        { text: 'Effektive Mehrwertdienste für kundenrelevante Anforderungen', icon: BarChart2 },
+        { text: 'Ständige Optimierung der Transportwegeplanung', icon: RefreshCw },
+        { text: 'Erhöhte Flexibilität durch individuelle Softwarelösungen', icon: Cpu },
+        { text: 'Maximaler Service bei kalkulierbarer Kostenstruktur', icon: Shield },
+        { text: 'Speziell auch Transporte für die Frische-Logistik', icon: Truck },
+        { text: 'Gerne übernehmen wir auch die Disposition direkt bei Ihnen vor Ort', icon: MapPin },
+      ],
+    },
+  ];
+
+  // removed old 'services' cards in favor of detailed Leistungen section
 
   return (
     <div className="min-h-screen">
@@ -115,18 +135,97 @@ export default function Home() {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">Unsere Dienstleistungen</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Maßgeschneiderte Lösungen für Ihre Logistikanforderungen
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {services.map((service, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-lg hover:shadow-lg transition-shadow">
-                <service.icon className="w-12 h-12 mb-4 text-gray-700" />
-                <h3 className="text-xl font-bold mb-3 text-gray-800">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Unsere Leistungen</h2>
+            <p className="text-lg text-gray-600">
+              Die folgende Liste zeigt eine Übersicht unserer aktuellen Leistungen.
+              <br />
+              Fragen zu den Positionen oder evtl. angebotenen Leistungen beantworten wir gerne unter
+              {' '}<a href="contact" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">KONTAKT</a>
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {servicesList.map((service, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-6">
+                  <div className="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4">
+                    <service.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">{service.title}</h3>
+                </div>
+                <ul className="space-y-4 text-left">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">{feature.text}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+              Sicherheit und Qualität im Transport
+            </h2>
+            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+              Einblicke in unsere Arbeitsweise: geschulte Fahrer, klare Prozesse und moderne Fahrzeuge für sichere und pünktliche Lieferungen.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {mediaItems.map((item, idx) => {
+              if (item.media.type === 'video') {
+                return (
+                  <>
+                    <div key={`${idx}-media`} className="bg-white rounded-xl overflow-hidden shadow-sm border md:col-span-2">
+                      <div className="p-0">
+                        <video
+                          className="w-full h-72 md:h-[420px] object-cover"
+                          controls
+                          muted
+                          loop
+                          playsInline
+                          preload="metadata"
+                        >
+                          <source src={item.media.src} type="video/mp4" />
+                          Ihr Browser unterstützt das Video-Element nicht.
+                        </video>
+                      </div>
+                    </div>
+                    <div key={`${idx}-text`} className="bg-gray-50 rounded-xl shadow-sm border p-6 md:col-span-2">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                      <p className="text-gray-700 mb-2">{item.description}</p>
+                    </div>
+                  </>
+                );
+              }
+
+              return (
+                <div key={idx} className="bg-gray-50 rounded-xl overflow-hidden shadow-sm border">
+                  <div className="flex flex-col md:flex-row h-full">
+                    <div className="md:w-1/2 p-6 flex items-center justify-center bg-white">
+                      <img
+                        src={item.media.src}
+                        alt={item.media.alt}
+                        className="max-h-56 w-auto object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="md:w-1/2 p-6 md:border-l">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                      <p className="text-gray-700 mb-4">{item.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
