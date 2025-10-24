@@ -20,6 +20,8 @@ export default function ImageSlideshow({
 }: ImageSlideshowProps) {
   const [current, setCurrent] = useState(0);
   const trackRef = useRef<HTMLDivElement | null>(null);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
 
   const slideTo = (index: number) => {
     if (!trackRef.current) return;
@@ -27,21 +29,38 @@ export default function ImageSlideshow({
     const slidesEls = Array.from(track.children) as HTMLElement[];
     const safeIndex = (index + slides.length) % slides.length;
     const target = slidesEls[safeIndex];
-    target?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    if (target) {
+      const left = target.offsetLeft - (track.clientWidth - target.clientWidth) / 2;
+      track.scrollTo({ left, behavior: 'smooth' });
+    }
     setCurrent(safeIndex);
   };
 
   const next = () => slideTo(current + 1);
   const prev = () => slideTo(current - 1);
 
-  // autoplay by scrolling to next card
+  // observe visibility to prevent page jumping when not in view
   useEffect(() => {
-    if (!autoPlay) return;
+    const el = wrapperRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        setIsVisible(entries[0]?.isIntersecting ?? true);
+      },
+      { threshold: 0.5 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  // autoplay by scrolling to next card only when visible
+  useEffect(() => {
+    if (!autoPlay || !isVisible) return;
     const id = setInterval(() => {
       next();
     }, interval);
     return () => clearInterval(id);
-  }, [current, autoPlay, interval]);
+  }, [current, autoPlay, interval, isVisible]);
 
   // sync current index based on scroll position
   useEffect(() => {
@@ -59,7 +78,7 @@ export default function ImageSlideshow({
   }, []);
 
   return (
-    <div className="relative w-full h-64 md:h-80">
+    <div ref={wrapperRef} className="relative w-full h-64 md:h-80">
       <div
         ref={trackRef}
         className="flex h-full w-full overflow-x-auto snap-x snap-mandatory scroll-smooth gap-6 px-2 md:px-4"

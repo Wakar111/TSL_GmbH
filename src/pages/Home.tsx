@@ -126,7 +126,7 @@ export default function Home() {
               Die folgende Liste zeigt eine Übersicht unserer aktuellen Leistungen.
               <br />
               Fragen zu den Positionen oder evtl. angebotenen Leistungen beantworten wir gerne unter
-              {' '}<a href="contact" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">KONTAKT</a>
+              {' '}<a href="contact" className="text-gray-800 hover:text-gray-900 font-medium transition-colors">KONTAKT</a>
             </p>
           </div>
 
@@ -185,15 +185,15 @@ export default function Home() {
                 </p>
                 <div className="flex items-center space-x-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">99.2%</div>
+                    <div className="text-2xl font-bold text-gray-800">99.2%</div>
                     <div className="text-sm text-gray-600">Pünktlichkeit</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">24/7</div>
+                    <div className="text-2xl font-bold text-gray-800">24/7</div>
                     <div className="text-sm text-gray-600">Service</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">100%</div>
+                    <div className="text-2xl font-bold text-gray-800">100%</div>
                     <div className="text-sm text-gray-600">Kundenfokus</div>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ export default function Home() {
                 </ul>
                 <a
                   href="/contact"
-                  className="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                  className="inline-block mt-6 bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-medium"
                 >
                   Kostenlose Beratung anfragen
                 </a>
@@ -256,27 +256,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section id="contact" className="py-20 bg-gradient-to-r from-gray-800 to-gray-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Starten Sie jetzt durch!</h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
             Lassen Sie uns gemeinsam Ihre Logistik optimieren. Kostenlose Erstberatung und maßgeschneiderte Lösungen für Ihr Unternehmen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
-              className="inline-block bg-white text-blue-600 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
+              className="inline-block bg-white text-gray-800 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
             >
               📞 Kostenlose Beratung anfragen
             </a>
             <a
               href="tel:+49123456789"
-              className="inline-block border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors text-lg"
+              className="inline-block border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-gray-800 transition-colors text-lg"
             >
               Sofort anrufen
             </a>
           </div>
-          <p className="mt-6 text-blue-200 text-sm">
+          <p className="mt-6 text-gray-300 text-sm">
             ✓ Unverbindlich ✓ Kostenlos ✓ Innerhalb 24h Rückmeldung
           </p>
         </div>
