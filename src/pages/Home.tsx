@@ -75,7 +75,7 @@ export default function Home() {
               Mit 65 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
             </p>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-block bg-white text-gray-800 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg"
             >
               Jetzt Kontakt aufnehmen
