@@ -21,37 +21,33 @@ export default function Imprint() {
 
               <div>
                 <h3 className="font-semibold text-lg mb-2">Anschrift</h3>
-                <p>Musterstraße 123</p>
-                <p>12345 Musterstadt</p>
+                <p>Am Sportplatz 1</p>
+                <p>64823 Groß-Umstadt/ Richen</p>
                 <p>Deutschland</p>
               </div>
 
               <div>
                 <h3 className="font-semibold text-lg mb-2">Kontakt</h3>
-                <p>Telefon: +49 (0) 123 456789</p>
-                <p>E-Mail: info@tsl-gmbh.de</p>
+                <p>Telefon: <a href="tel:+49607893560">+49 (0) 6078 93560</a></p>
+                <p>E-Mail: <a href="mailto:tsl@tsl-gmbh.de">tsl@tsl-gmbh.de</a></p>
               </div>
 
               <div>
                 <h3 className="font-semibold text-lg mb-2">Vertretungsberechtigte Geschäftsführer</h3>
-                <p>Max Mustermann</p>
-                <p>Maria Musterfrau</p>
+                <p>Alen Houssepian</p>
+                <p>Ron Landgraf</p>
+                <p>Andreas Hillmann</p>
               </div>
 
-              <div>
-                <h3 className="font-semibold text-lg mb-2">Registereintrag</h3>
-                <p>Handelsregister: HRB 12345</p>
-                <p>Registergericht: Amtsgericht Musterstadt</p>
-              </div>
 
               <div>
                 <h3 className="font-semibold text-lg mb-2">Umsatzsteuer-ID</h3>
                 <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:</p>
-                <p>DE123456789</p>
+                <p>DE 165938488</p>
               </div>
 
               <div>
-                <h3 className="font-semibold text-lg mb-2">Haftungsausschluss</h3>
+                <h3 className="font-semibold text-lg mb-2">Rechtliche Hinweise</h3>
                 <p className="mb-3">
                   <strong>Haftung für Inhalte:</strong> Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt.
                   Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
@@ -62,6 +58,15 @@ export default function Imprint() {
                   der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
                 </p>
               </div>
+
+              {/* TODO: Add that innvative-tech has built this website */}
+              <div> 
+                <h3 className="font-semibold text-lg mb-2">Technische Umsetzung</h3>
+                <p>Diese Website wurde technisch umgesetzt von 
+                  <a href="https://innovativ-tech.de" target="_blank" className="text-blue-600 hover:underline" rel="noopener noreferrer"> Innovativ-Tech</a>
+                  </p>
+              </div>
+
             </div>
           </div>
         </div>
