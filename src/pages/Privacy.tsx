@@ -45,12 +45,17 @@ export default function Privacy() {
                 <h3 className="font-semibold text-lg mb-3">Wie erfassen wir Ihre Daten?</h3>
                 <p className="mb-4">
                   Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich
-                  z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben oder uns per E-Mail zusenden.
+                  z.B. um Daten handeln, die Sie uns per E-Mail zusenden.
                 </p>
                 <p className="mb-4">
                   Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind
                   vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).
                   Die Erfassung dieser Daten erfolgt automatisch, sobald Sie unsere Website betreten.
+                </p>
+                <p className="mb-4">
+                  <strong>Hinweis:</strong> Unsere Website verwendet kein Kontaktformular. Eine Datenübermittlung 
+                  über die Website findet nicht statt. Die Kontaktaufnahme erfolgt ausschließlich über Ihre 
+                  persönliche E-Mail-Anwendung.
                 </p>
 
                 <h3 className="font-semibold text-lg mb-3 mt-6">Wofür nutzen wir Ihre Daten?</h3>
@@ -158,43 +163,82 @@ export default function Privacy() {
                 <ul className="list-disc list-inside space-y-1 mb-4 ml-4">
                   <li>Datum und Uhrzeit der Anforderung</li>
                   <li>Name der angeforderten Datei</li>
-                  <li>Seite, von der aus die Datei angefordert wurde</li>
-                  <li>Zugriffsstatus</li>
+                  <li>Seite, von der aus die Datei angefordert wurde (Referrer-URL)</li>
+                  <li>Zugriffsstatus / HTTP-Statuscode</li>
                   <li>Verwendeter Webbrowser und verwendetes Betriebssystem</li>
-                  <li>(Vollständige) IP-Adresse des anfordernden Rechners</li>
+                  <li>IP-Adresse des anfordernden Rechners</li>
                   <li>Übertragene Datenmenge</li>
                 </ul>
                 <p className="mb-4">
-                  Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.
+                  Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. 
+                  Die Daten werden ausschließlich zu statistischen Zwecken ausgewertet und nach einer 
+                  angemessenen Zeit gelöscht.
                 </p>
                 <p className="mb-4">
-                  Grundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO, der die Verarbeitung von Daten
-                  zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen gestattet.
+                  Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. 
+                  Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung 
+                  und der Optimierung seiner Website – hierzu müssen die Server-Log-Dateien erfasst werden.
                 </p>
 
-                <h3 className="font-semibold text-lg mb-3 mt-6">Kontaktformular und E-Mail-Kontakt</h3>
+                <h3 className="font-semibold text-lg mb-3 mt-6">E-Mail-Kontakt</h3>
                 <p className="mb-4">
-                  Wenn Sie uns per Kontaktformular oder E-Mail Anfragen zukommen lassen, werden Ihre Angaben aus dem
-                  Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der
-                  Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht
-                  ohne Ihre Einwilligung weiter.
+                  Wenn Sie uns per E-Mail kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden 
+                  personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns 
+                  verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
                 </p>
                 <p className="mb-4">
-                  Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf
-                  Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können diese Einwilligung jederzeit
-                  widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum
-                  Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.
+                  Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre 
+                  Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher 
+                  Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf Ihrer Einwilligung 
+                  (Art. 6 Abs. 1 lit. a DSGVO) und/oder auf unseren berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO), 
+                  da wir ein berechtigtes Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen haben.
                 </p>
                 <p className="mb-4">
-                  Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung
-                  auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung
-                  entfällt (z.B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen –
-                  insbesondere Aufbewahrungsfristen – bleiben unberührt.
+                  Die von Ihnen an uns per E-Mail übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung 
+                  auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung 
+                  entfällt (z.B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – 
+                  insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.
+                </p>
+                <p className="mb-4">
+                  <strong>Wichtiger Hinweis:</strong> Wir verwenden auf unserer Website kein Kontaktformular. 
+                  Die Kontaktaufnahme erfolgt ausschließlich über Ihre persönliche E-Mail-Anwendung. Dabei werden 
+                  keine Daten auf unserer Website gespeichert oder übermittelt.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">6. Soziale Medien</h2>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">6. Veröffentlichung von Mitarbeiterfotos</h2>
+                
+                <h3 className="font-semibold text-lg mb-3">Verwendung von Personalfotos</h3>
+                <p className="mb-4">
+                  Auf unserer Website veröffentlichen wir Fotos unserer Mitarbeiterinnen und Mitarbeiter ausschließlich 
+                  auf Grundlage einer vorliegenden Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Die Veröffentlichung 
+                  ist freiwillig. Die Einwilligung kann jederzeit für die Zukunft widerrufen werden.
+                </p>
+                <p className="mb-4">
+                  Die Fotos dienen dazu, unser Team vorzustellen und einen persönlichen Einblick in unser Unternehmen 
+                  zu geben. Sie werden ausschließlich zu diesem Zweck verwendet.
+                </p>
+                
+                <h3 className="font-semibold text-lg mb-3 mt-6">Rechte der abgebildeten Personen</h3>
+                <p className="mb-4">
+                  Abgebildete Mitarbeiterinnen und Mitarbeiter haben folgende Rechte:
+                </p>
+                <ul className="list-disc list-inside space-y-2 mb-4 ml-4">
+                  <li>Recht auf Widerruf der Einwilligung jederzeit für die Zukunft</li>
+                  <li>Recht auf Löschung der Fotos nach Widerruf der Einwilligung</li>
+                  <li>Recht auf Auskunft über die Verwendung der Fotos</li>
+                  <li>Recht auf Berichtigung, sofern Angaben zur Person unrichtig sind</li>
+                </ul>
+                <p className="mb-4">
+                  Für einen Widerruf oder die Ausübung Ihrer Rechte wenden Sie sich bitte an die im Impressum 
+                  angegebene Kontaktadresse. Nach einem Widerruf werden die betreffenden Fotos zeitnah von unserer 
+                  Website entfernt.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">7. Soziale Medien</h2>
                 
                 <h3 className="font-semibold text-lg mb-3">Facebook und Instagram</h3>
                 <p className="mb-4">
@@ -210,7 +254,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold mb-4 text-gray-800">7. Änderung der Datenschutzerklärung</h2>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800">8. Änderung der Datenschutzerklärung</h2>
                 <p className="mb-4">
                   Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen
                   rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der

@@ -72,7 +72,7 @@ export default function Home() {
               Ihr Partner für Transport & Logistik
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              Mit 65 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
+              Mit 140 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
             </p>
             <a
               href="/contact"
