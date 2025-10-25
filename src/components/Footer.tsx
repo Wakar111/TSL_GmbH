@@ -7,13 +7,13 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-gray-300">TSL GmbH</h3>
+            <img src="/tsl-logo.jpg" alt="Logo" className="w-24 mb-4" />
             <p className="text-gray-400 mb-4">
               Ihr zuverlässiger Partner für Transport und Logistik seit über 20 Jahren.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/TSL-GmbH-Gro%c3%9f-Umstadt-112782854818567"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200 transition-colors"
@@ -21,7 +21,7 @@ export default function Footer() {
                 <Facebook size={24} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/tslgmbh/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200 transition-colors"
@@ -38,16 +38,16 @@ export default function Footer() {
                 <MapPin size={20} className="text-gray-300 mt-1 flex-shrink-0" />
                 <p className="text-gray-400">
                   Hauptsitz Deutschland<br />
-                  Standorte in ganz Deutschland
+                  Groß-Umstadt
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={20} className="text-gray-300 flex-shrink-0" />
-                <p className="text-gray-400">+49 (0) 123 456789</p>
+                <p className="text-gray-400">+49 (0) 6078 93560</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={20} className="text-gray-300 flex-shrink-0" />
-                <p className="text-gray-400">info@tsl-gmbh.de</p>
+                <p className="text-gray-400">tsl@tsl-gmbh.de</p>
               </div>
             </div>
           </div>
@@ -83,6 +83,8 @@ export default function Footer() {
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             © 2025 TSL GmbH. Alle Rechte vorbehalten.
           </p>
+          {/*add here text - developed by innovative-tech */}
+          <p className="text-gray-400 text-sm mb-4 md:mb-0">Entwickelt von <a href="https://innovativ-tech.de/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-200 transition-colors">Innovative-Tech</a></p>
           <div className="flex space-x-6 text-sm">
             <Link to="/imprint" className="text-gray-400 hover:text-gray-200 transition-colors">
               Impressum

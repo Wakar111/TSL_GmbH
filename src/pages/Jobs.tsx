@@ -58,7 +58,7 @@ export default function Jobs() {
               Bei uns erwartet Sie ein modernes Arbeitsumfeld mit vielfältigen Entwicklungsmöglichkeiten.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Unser Team von 65 Mitarbeitern freut sich auf Ihre Verstärkung!
+              Unser Team von 140 Mitarbeitern freut sich auf Ihre Verstärkung!
             </p>
           </div>
 
