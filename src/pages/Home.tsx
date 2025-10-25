@@ -178,7 +178,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* Flotte Slideshow - moved up for better flow */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
