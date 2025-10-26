@@ -43,21 +43,18 @@ export default function Fleet() {
     setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
   };
 
-  const goToImage = (index: number) => {
-    setCurrentImageIndex(index);
-  };
   const vehicles = [
     {
       type: 'Kühl-LKW',
       count: 15,
       icon: Thermometer,
-      specs: ['7,5t - 12t Nutzlast', 'Temperaturgeführt -20°C bis +20°C', 'GPS-Tracking'],
+      specs: ['7,5t - 12t Nutzlast', 'Temperaturbereich -20°C bis +20°C', 'Durchgehende Kühlkette'],
     },
     {
       type: 'Standard-LKW',
       count: 20,
       icon: Truck,
-      specs: ['12t - 40t Nutzlast', 'Ladebordwand', 'Europaletten'],
+      specs: ['12t - 40t Nutzlast', 'Ladebordwand', 'Bis zu 37 Europaletten-Stellplätze'],
     },
     {
       type: 'Sattelzug',
@@ -104,11 +101,11 @@ export default function Fleet() {
               <div className="space-y-4">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Unser moderner Fuhrpark umfasst eine Vielzahl von Fahrzeugen, die speziell für unterschiedliche 
-                  Transportanforderungen konzipiert sind. Alle Fahrzeuge werden regelmäßig gewartet und entsprechen 
-                  den neuesten Umwelt- und Sicherheitsstandards.
+                  Transportanforderungen konzipiert sind – von Kühlfahrzeugen über Standard-LKW bis hin zu 
+                  Sattelzügen und Transportern.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Mit GPS-Tracking, temperaturgeführten Kühlaufbauten und modernster Telematik garantieren wir 
+                  Mit modernster Ausstattung und intelligenter Flottensteuerung garantieren wir 
                   sichere und pünktliche Lieferungen zu jeder Zeit.
                 </p>
               </div>
@@ -121,19 +118,15 @@ export default function Fleet() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Regelmäßige Wartung und Sicherheitschecks</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
                     <span className="text-gray-700">Neueste Umweltstandards (Euro 6)</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">GPS-Tracking für lückenlose Sendungsverfolgung</span>
+                    <span className="text-gray-700">Spezialisierte Fahrzeugtypen für jeden Bedarf</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700">Temperaturgeführte Kühlfahrzeuge verfügbar</span>
+                    <span className="text-gray-700">Modernste Technologie und Ausstattung</span>
                   </li>
                 </ul>
               </div>
@@ -337,33 +330,40 @@ export default function Fleet() {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-gray-800 text-center">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-8 text-gray-800 text-center">
               Technologie & Ausstattung
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-bold text-xl mb-3 text-gray-800">GPS-Tracking</h3>
-                <p className="text-gray-700">
-                  Alle Fahrzeuge sind mit modernster GPS-Technologie ausgestattet für lückenlose Sendungsverfolgung.
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gray-50 p-8 rounded-xl shadow-md">
+                <h3 className="font-bold text-2xl mb-4 text-gray-800">GPS-Tracking & Telematik</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Alle Fahrzeuge sind mit modernster GPS-Technologie und intelligenten Telematik-Systemen ausgestattet. 
+                  Dies ermöglicht lückenlose Sendungsverfolgung in Echtzeit, optimierte Routenplanung und maximale 
+                  Kraftstoffeffizienz. Sie wissen jederzeit, wo sich Ihre Sendung befindet.
                 </p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-bold text-xl mb-3 text-gray-800">Temperaturkontrolle</h3>
-                <p className="text-gray-700">
-                  Unsere Kühlfahrzeuge garantieren durchgehende Kühlkette von -20°C bis +20°C.
+              <div className="bg-gray-50 p-8 rounded-xl shadow-md">
+                <h3 className="font-bold text-2xl mb-4 text-gray-800">Temperaturkontrolle</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Unsere Kühlfahrzeuge garantieren eine durchgehende Kühlkette von -20°C bis +20°C mit präziser 
+                  Temperaturüberwachung. Perfekt für temperaturempfindliche Waren wie Lebensmittel, Pharmazeutika 
+                  oder andere sensible Güter.
                 </p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-bold text-xl mb-3 text-gray-800">Telematik-System</h3>
-                <p className="text-gray-700">
-                  Intelligente Flottensteuerung für optimierte Routen und Kraftstoffeffizienz.
+              <div className="bg-gray-50 p-8 rounded-xl shadow-md">
+                <h3 className="font-bold text-2xl mb-4 text-gray-800">Sicherheit & Wartung</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Modernste Sicherheitssysteme, regelmäßige Wartungsintervalle und TÜV-geprüfte Fahrzeuge garantieren 
+                  maximale Betriebssicherheit. Alle Fahrer sind geschult und zertifiziert für den sicheren Transport 
+                  Ihrer Güter.
                 </p>
               </div>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-bold text-xl mb-3 text-gray-800">Sicherheit</h3>
-                <p className="text-gray-700">
-                  Modernste Sicherheitssysteme und regelmäßige Wartung für maximale Betriebssicherheit.
+              <div className="bg-gray-50 p-8 rounded-xl shadow-md">
+                <h3 className="font-bold text-2xl mb-4 text-gray-800">Umweltstandards</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Unsere gesamte Flotte entspricht den neuesten Umweltstandards (Euro 6). Durch moderne Motorentechnologie 
+                  und optimierte Logistikprozesse reduzieren wir Emissionen und tragen aktiv zum Umweltschutz bei.
                 </p>
               </div>
             </div>
