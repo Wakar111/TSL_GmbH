@@ -23,15 +23,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative container mx-auto px-4 flex items-center min-h-[60vh] md:min-h-[70vh]">
           <div className="max-w-3xl text-center md:text-left mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6">
               Ihr Partner für Transport & Logistik
             </h1>
-            <p className="text-lg md:text-2xl mb-8 text-gray-200">
+            <p className="text-base md:text-2xl mb-8 text-gray-200">
               Mit über 140 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
             </p>
             <a
               href="/contact"
-              className="inline-block bg-white text-gray-800 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg"
+              className="inline-block bg-white text-gray-800 font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors text-base md:text-lg"
             >
               Jetzt Kontakt aufnehmen
             </a>
@@ -46,28 +46,28 @@ export default function Home() {
               <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
                 <Users className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">140+</h3>
+              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">140+</h3>
               <p className="text-sm md:text-base text-gray-600">Mitarbeiter</p>
             </div>
             <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
               <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
                 <Truck className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">50+</h3>
+              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">50+</h3>
               <p className="text-sm md:text-base text-gray-600">Fahrzeuge</p>
             </div>
             <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
               <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
                 <MapPin className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">5+</h3>
+              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">5+</h3>
               <p className="text-sm md:text-base text-gray-600">Standorte</p>
             </div>
             <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
               <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
                 <Award className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">30+</h3>
+              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">30+</h3>
               <p className="text-sm md:text-base text-gray-600">Jahre Erfahrung</p>
             </div>
           </div>
@@ -77,14 +77,14 @@ export default function Home() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
+              <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
                 Mit über 30 Jahren Erfahrung in der Logistikbranche bietet TSL GmbH umfassende Transport- und Logistikdienstleistungen. Unser Team von 140 hochqualifizierten Mitarbeitern arbeitet täglich daran, die Bedürfnisse unserer Kunden zu erfüllen und zu übertreffen.
               </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
                 Mit Standorten in mehreren deutschen Städten sind wir optimal positioniert, um schnelle und effiziente Lieferungen in ganz Deutschland und darüber hinaus zu gewährleisten. Unsere moderne Flotte und individuell angepasste Software-Lösungen ermöglichen es uns, auch komplexeste logistische Herausforderungen zu meistern.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                 Kundenzufriedenheit steht bei uns an erster Stelle. Wir entwickeln maßgeschneiderte Logistikpakete, die perfekt auf die spezifischen Anforderungen unserer Kunden zugeschnitten sind.
               </p>
             </div>
@@ -94,9 +94,9 @@ export default function Home() {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">Unsere Leistungen</h2>
-            <p className="text-lg text-gray-600">
+          <div className="max-w-4xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Unsere Leistungen</h2>
+            <p className="text-base md:text-lg text-gray-600">
               Die folgende Liste zeigt eine Übersicht unserer aktuellen Leistungen.
               <br />
               Fragen zu den Positionen oder evtl. angebotenen Leistungen beantworten wir gerne unter
@@ -106,18 +106,18 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {servicesList.map((service, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div key={index} className="bg-gray-50 rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center mb-6">
                   <div className="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4">
                     <service.icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800">{service.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-800">{service.title}</h3>
                 </div>
                 <ul className="space-y-4 text-left">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">{feature.text}</span>
+                      <span className="text-sm md:text-base text-gray-700">{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -134,51 +134,51 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl font-bold mb-6 text-gray-800">Über TSL GmbH</h2>
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Über TSL GmbH</h2>
+                <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
                   <strong>30+ Jahre Erfahrung</strong> in der Logistikbranche. Unser Team von 65 Spezialisten arbeitet täglich daran, Ihre Erwartungen zu übertreffen.
                 </p>
-                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
                   Mit Standorten in ganz Deutschland sind wir optimal positioniert für <strong>schnelle und effiziente Lieferungen</strong>. Unsere moderne Flotte und individuellen Software-Lösungen meistern auch komplexeste Herausforderungen.
                 </p>
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-4 md:space-x-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-800">99.2%</div>
-                    <div className="text-sm text-gray-600">Pünktlichkeit</div>
+                    <div className="text-xl md:text-2xl font-bold text-gray-800">99.2%</div>
+                    <div className="text-xs md:text-sm text-gray-600">Pünktlichkeit</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-800">24/7</div>
-                    <div className="text-sm text-gray-600">Service</div>
+                    <div className="text-xl md:text-2xl font-bold text-gray-800">24/7</div>
+                    <div className="text-xs md:text-sm text-gray-600">Service</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-800">100%</div>
-                    <div className="text-sm text-gray-600">Kundenfokus</div>
+                    <div className="text-xl md:text-2xl font-bold text-gray-800">100%</div>
+                    <div className="text-xs md:text-sm text-gray-600">Kundenfokus</div>
                   </div>
                 </div>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold mb-4 text-gray-800">Warum TSL wählen?</h3>
+              <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                <h3 className="text-lg md:text-xl font-bold mb-4 text-gray-800">Warum TSL wählen?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Deutschlandweites Netzwerk</span>
+                    <span className="text-sm md:text-base">Deutschlandweites Netzwerk</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Maßgeschneiderte Lösungen</span>
+                    <span className="text-sm md:text-base">Maßgeschneiderte Lösungen</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Transparente Preisgestaltung</span>
+                    <span className="text-sm md:text-base">Transparente Preisgestaltung</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span>Persönlicher Ansprechpartner</span>
+                    <span className="text-sm md:text-base">Persönlicher Ansprechpartner</span>
                   </li>
                 </ul>
                 <a
                   href="/contact"
-                  className="inline-block mt-6 bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-medium"
+                  className="inline-block mt-6 bg-gray-800 text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg hover:bg-gray-700 transition-colors font-medium text-sm md:text-base"
                 >
                   Kostenlose Beratung anfragen
                 </a>
@@ -190,8 +190,8 @@ export default function Home() {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">Unsere Partner</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Unsere Partner</h2>
+          <p className="text-sm md:text-base text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Vertrauen Sie auf bewährte Partnerschaften mit führenden Unternehmen
           </p>
           <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
@@ -216,8 +216,8 @@ export default function Home() {
 
       <section id="contact" className="py-20 bg-gradient-to-r from-gray-800 to-gray-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Starten Sie jetzt durch!</h2>
-          <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Starten Sie jetzt durch!</h2>
+          <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
             Lassen Sie uns gemeinsam Ihre Logistik optimieren. Kostenlose Erstberatung und maßgeschneiderte Lösungen für Ihr Unternehmen.
           </p>
 
@@ -239,13 +239,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
-              className="inline-block bg-white text-gray-800 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
+              className="inline-block bg-white text-gray-800 font-bold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors text-base md:text-lg shadow-lg"
             >
               📞 Kostenlose Beratung anfragen
             </a>
             <a
               href="tel:+49123456789"
-              className="inline-block border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-gray-800 transition-colors text-lg"
+              className="inline-block border-2 border-white text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-white hover:text-gray-800 transition-colors text-base md:text-lg"
             >
               Sofort anrufen
             </a>
