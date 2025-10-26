@@ -17,9 +17,11 @@ export default function Header() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-white p-4 border-b-[1px] border-gray-200 flex items-center justify-between sticky top-0 z-50">
-      <NavLeft setIsOpen={setIsOpen} navLinks={navLinks} isActive={isActive} />
-      <NavRight />
+    <nav className="bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-gray-200 sticky top-0 z-50">
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <NavLeft setIsOpen={setIsOpen} />
+        <NavLinksRight navLinks={navLinks} isActive={isActive} />
+      </div>
       <NavMenu isOpen={isOpen} setIsOpen={setIsOpen} navLinks={navLinks} isActive={isActive} />
     </nav>
   );
@@ -28,7 +30,7 @@ export default function Header() {
 const Logo = () => {
   return (
     <Link to="/" className="flex items-center">
-      <img src="/tsl-logo.jpg" alt="TSL Logo" className="w-20 h-20 ml-6" />
+      <img src="/tsl-logo.jpg" alt="TSL Logo" className="w-20 h-20" />
       <div className="ml-2">
         <h1 className="text-lg font-bold text-gray-800">TSL GmbH</h1>
         {/* <p className="text-xs text-gray-600">Transport & Logistik</p> */}
@@ -39,12 +41,8 @@ const Logo = () => {
 
 const NavLeft = ({
   setIsOpen,
-  navLinks,
-  isActive,
 }: {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  navLinks: { path: string; label: string }[];
-  isActive: (path: string) => boolean;
 }) => {
   return (
     <div className="flex items-center gap-6">
@@ -57,9 +55,6 @@ const NavLeft = ({
         <FiMenu />
       </motion.button>
       <Logo />
-      {navLinks.map((link) => (
-        <NavLink key={link.path} text={link.label} path={link.path} isActive={isActive(link.path)} />
-      ))}
     </div>
   );
 };
@@ -82,18 +77,18 @@ const NavLink = ({ text, path, isActive }: { text: string; path: string; isActiv
   );
 };
 
-const NavRight = () => {
+const NavLinksRight = ({
+  navLinks,
+  isActive,
+}: {
+  navLinks: { path: string; label: string }[];
+  isActive: (path: string) => boolean;
+}) => {
   return (
-    <div className="hidden lg:flex items-center gap-4">
-      <Link to="/contact">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white font-medium rounded-md whitespace-nowrap"
-        >
-          Kontakt aufnehmen
-        </motion.button>
-      </Link>
+    <div className="hidden lg:flex items-center gap-8 ml-auto">
+      {navLinks.map((link) => (
+        <NavLink key={link.path} text={link.label} path={link.path} isActive={isActive(link.path)} />
+      ))}
     </div>
   );
 };
@@ -114,7 +109,7 @@ const NavMenu = ({
       variants={menuVariants}
       initial="closed"
       animate={isOpen ? "open" : "closed"}
-      className="absolute p-4 bg-white shadow-lg left-0 right-0 top-full origin-top flex flex-col gap-4"
+      className="absolute p-4 bg-white shadow-lg left-0 right-0 top-20 origin-top flex flex-col gap-4"
     >
       {navLinks.map((link) => (
         <MenuLink

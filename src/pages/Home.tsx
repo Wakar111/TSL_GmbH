@@ -1,4 +1,5 @@
-import { Truck, Users, MapPin, Award, CheckCircle, ArrowRight, Box, Cpu, ShieldCheck, BarChart2, Target, Clock as ClockIcon, Wrench, Shield, RefreshCw, Layers } from 'lucide-react';
+import { Truck, Users, MapPin, Award, CheckCircle, ArrowRight, Cpu, ShieldCheck, BarChart2, Target, Clock as ClockIcon, Wrench, Shield, RefreshCw, Layers } from 'lucide-react';
+import ImageSlideshow from '../components/ImageSlideshow';
 
 export default function Home() {
   const partners = [
@@ -10,38 +11,44 @@ export default function Home() {
     { name: 'ECK', logo: '/Firmen-Logos/ECK.png', className: 'h-12' },
   ];
 
-  const mediaItems = [
+
+  // Slideshow images
+  const truckSlides = [
     {
-      title: 'Sicherheit hat bei uns oberste Priorität.',
-      description:
-        'Jeder Handgriff zählt – vom ersten Check bis zur letzten Lieferung. Mit Erfahrung, Präzision und Verantwortungsbewusstsein sorgen wir dafür, dass Menschen, Fahrzeuge und Waren sicher und zuverlässig ans Ziel gelangen.',
-      media: { type: 'video' as const, src: '/Videos/Abschnitt-1.mp4', alt: 'Fahrereinweisung' },
+      image: '/LKW-1.png',
+      title: 'Moderne LKW Flotte',
+      description: 'Unsere modernen Fahrzeuge für zuverlässige Transporte',
+    },
+    {
+      image: '/LKW-2.png',
+      title: 'Professionelle Logistik',
+      description: 'Zuverlässiger Transport Ihrer Waren',
     },
   ];
 
   const servicesList = [
     {
-      title: 'NUTZUNGSPAKETE',
-      icon: Box,
+      title: 'TRANSPORT & LOGISTIK',
+      icon: Truck,
       features: [
-        { text: 'Schneller Lagerumschlag (24 Std. im Umkreis von 100 km)', icon: ClockIcon },
-        { text: 'Einsatz modernster Technik', icon: Cpu },
-        { text: 'Unser Equipment genügt höchsten logistischen Ansprüchen', icon: ShieldCheck },
-        { text: 'Exzellenter Qualitätsstandard', icon: Award },
-        { text: 'Ladekapazitätserhöhung von 55% durch Doppeldecker-Lastzüge', icon: Layers },
+        { text: '24h Lagerumschlag im 100km Umkreis', icon: ClockIcon },
+        { text: 'Modernste Fahrzeugflotte', icon: Cpu },
+        { text: 'Höchste Sicherheitsstandards', icon: ShieldCheck },
+        { text: 'Pünktliche Liefergarantie', icon: Award },
+        { text: '+55% Kapazität durch Doppeldecker', icon: Layers },
       ],
     },
     {
-      title: 'LEISTUNGSMERKMALE',
+      title: 'INDIVIDUELLE LÖSUNGEN',
       icon: Target,
       features: [
-        { text: 'Individuelle Erstellung logistischer Konzepte gemäß dem Anforderungsprofil des Kunden', icon: Wrench },
-        { text: 'Effektive Mehrwertdienste für kundenrelevante Anforderungen', icon: BarChart2 },
-        { text: 'Ständige Optimierung der Transportwegeplanung', icon: RefreshCw },
-        { text: 'Erhöhte Flexibilität durch individuelle Softwarelösungen', icon: Cpu },
-        { text: 'Maximaler Service bei kalkulierbarer Kostenstruktur', icon: Shield },
-        { text: 'Speziell auch Transporte für die Frische-Logistik', icon: Truck },
-        { text: 'Gerne übernehmen wir auch die Disposition direkt bei Ihnen vor Ort', icon: MapPin },
+        { text: 'Maßgeschneiderte Logistikkonzepte', icon: Wrench },
+        { text: 'Flexible Zusatzservices', icon: BarChart2 },
+        { text: 'Optimierte Routenplanung', icon: RefreshCw },
+        { text: 'Eigene Software-Lösungen', icon: Cpu },
+        { text: 'Transparente Kostenstruktur', icon: Shield },
+        { text: 'Kühlketten-Transport', icon: Truck },
+        { text: 'Vor-Ort Disposition möglich', icon: MapPin },
       ],
     },
   ];
@@ -141,7 +148,7 @@ export default function Home() {
               Die folgende Liste zeigt eine Übersicht unserer aktuellen Leistungen.
               <br />
               Fragen zu den Positionen oder evtl. angebotenen Leistungen beantworten wir gerne unter
-              {' '}<a href="contact" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">KONTAKT</a>
+              {' '}<a href="contact" className="text-gray-800 hover:text-gray-900 font-medium transition-colors">KONTAKT</a>
             </p>
           </div>
 
@@ -168,71 +175,89 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* Flotte Slideshow - moved up for better flow */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Sicherheit und Qualität im Transport
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+              Unsere Flotte in Aktion
             </h2>
-            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
-              Einblicke in unsere Arbeitsweise: geschulte Fahrer, klare Prozesse und moderne Fahrzeuge für sichere und pünktliche Lieferungen.
+            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+              Moderne Fahrzeuge, geschulte Fahrer und höchste Sicherheitsstandards für Ihren Erfolg.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {mediaItems.map((item, idx) => {
-              if (item.media.type === 'video') {
-                return (
-                  <>
-                    <div key={`${idx}-media`} className="bg-white rounded-xl overflow-hidden shadow-sm border md:col-span-2">
-                      <div className="p-0">
-                        <video
-                          className="w-full h-72 md:h-[420px] object-cover"
-                          controls
-                          muted
-                          loop
-                          playsInline
-                          preload="metadata"
-                        >
-                          <source src={item.media.src} type="video/mp4" />
-                          Ihr Browser unterstützt das Video-Element nicht.
-                        </video>
-                      </div>
-                    </div>
-                    <div key={`${idx}-text`} className="bg-gray-50 rounded-xl shadow-sm border p-6 md:col-span-2">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                      <p className="text-gray-700 mb-2">{item.description}</p>
-                    </div>
-                  </>
-                );
-              }
-
-              return (
-                <div key={idx} className="bg-gray-50 rounded-xl overflow-hidden shadow-sm border">
-                  <div className="flex flex-col md:flex-row h-full">
-                    <div className="md:w-1/2 p-6 flex items-center justify-center bg-white">
-                      <img
-                        src={item.media.src}
-                        alt={item.media.alt}
-                        className="max-h-56 w-auto object-contain"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="md:w-1/2 p-6 md:border-l">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                      <p className="text-gray-700 mb-4">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+            <ImageSlideshow slides={truckSlides} />
           </div>
         </div>
       </section>
 
+      
+
+      {/* Über uns - moved after safety video */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Unsere Partner</h2>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl font-bold mb-6 text-gray-800">Über TSL GmbH</h2>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  <strong>20+ Jahre Erfahrung</strong> in der Logistikbranche. Unser Team von 65 Spezialisten arbeitet täglich daran, Ihre Erwartungen zu übertreffen.
+                </p>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  Mit Standorten in ganz Deutschland sind wir optimal positioniert für <strong>schnelle und effiziente Lieferungen</strong>. Unsere moderne Flotte und individuellen Software-Lösungen meistern auch komplexeste Herausforderungen.
+                </p>
+                <div className="flex items-center space-x-6">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-800">99.2%</div>
+                    <div className="text-sm text-gray-600">Pünktlichkeit</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-800">24/7</div>
+                    <div className="text-sm text-gray-600">Service</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-gray-800">100%</div>
+                    <div className="text-sm text-gray-600">Kundenfokus</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold mb-4 text-gray-800">Warum TSL wählen?</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Deutschlandweites Netzwerk</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Maßgeschneiderte Lösungen</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Transparente Preisgestaltung</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <span>Persönlicher Ansprechpartner</span>
+                  </li>
+                </ul>
+                <a
+                  href="/contact"
+                  className="inline-block mt-6 bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors font-medium"
+                >
+                  Kostenlose Beratung anfragen
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">Unsere Partner</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Vertrauen Sie auf bewährte Partnerschaften mit führenden Unternehmen
+          </p>
           <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <div
               className="flex w-max gap-12 items-center"
@@ -253,18 +278,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-16 bg-gray-700 text-white">
+      <section id="contact" className="py-20 bg-gradient-to-r from-gray-800 to-gray-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Bereit für die Zusammenarbeit?</h2>
-          <p className="text-xl mb-8 text-gray-300">
-            Kontaktieren Sie uns noch heute und erfahren Sie, wie wir Ihre Logistik optimieren können.
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Starten Sie jetzt durch!</h2>
+          <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
+            Lassen Sie uns gemeinsam Ihre Logistik optimieren. Kostenlose Erstberatung und maßgeschneiderte Lösungen für Ihr Unternehmen.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-gray-800 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg"
-          >
-            Kontaktieren Sie uns
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="/contact"
+              className="inline-block bg-white text-gray-800 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
+            >
+              📞 Kostenlose Beratung anfragen
+            </a>
+            <a
+              href="tel:+49123456789"
+              className="inline-block border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-gray-800 transition-colors text-lg"
+            >
+              Sofort anrufen
+            </a>
+          </div>
+          <p className="mt-6 text-gray-300 text-sm">
+            ✓ Unverbindlich ✓ Kostenlos ✓ Innerhalb 24h Rückmeldung
+          </p>
         </div>
       </section>
     </div>
