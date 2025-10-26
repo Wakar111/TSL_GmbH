@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Google Map (Footer) */}
+        {/* Google Map (Footer) *
         <div className="mt-8 mb-8">
           <div className="mx-auto bg-gray-800/60 rounded-lg overflow-hidden shadow-inner w-full">
             <div className="relative w-full h-48 md:h-64">
@@ -93,7 +93,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        */}
 
+        
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             © 2025 TSL GmbH. Alle Rechte vorbehalten.

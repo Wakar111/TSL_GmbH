@@ -79,7 +79,7 @@ export default function Home() {
               Ihr Partner für Transport & Logistik
             </h1>
             <p className="text-lg md:text-2xl mb-8 text-gray-200">
-              Mit 140 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
+              Mit über 140 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
             </p>
             <a
               href="/contact"
@@ -98,7 +98,7 @@ export default function Home() {
               <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
                 <Users className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">140</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">140+</h3>
               <p className="text-sm md:text-base text-gray-600">Mitarbeiter</p>
             </div>
             <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
@@ -119,7 +119,7 @@ export default function Home() {
               <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
                 <Award className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">20+</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">30+</h3>
               <p className="text-sm md:text-base text-gray-600">Jahre Erfahrung</p>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Mit über 20 Jahren Erfahrung in der Logistikbranche bietet TSL GmbH umfassende Transport- und Logistikdienstleistungen. Unser Team von 140 hochqualifizierten Mitarbeitern arbeitet täglich daran, die Bedürfnisse unserer Kunden zu erfüllen und zu übertreffen.
+                Mit über 30 Jahren Erfahrung in der Logistikbranche bietet TSL GmbH umfassende Transport- und Logistikdienstleistungen. Unser Team von 140 hochqualifizierten Mitarbeitern arbeitet täglich daran, die Bedürfnisse unserer Kunden zu erfüllen und zu übertreffen.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Mit Standorten in mehreren deutschen Städten sind wir optimal positioniert, um schnelle und effiziente Lieferungen in ganz Deutschland und darüber hinaus zu gewährleisten. Unsere moderne Flotte und individuell angepasste Software-Lösungen ermöglichen es uns, auch komplexeste logistische Herausforderungen zu meistern.
@@ -178,23 +178,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      {/* Flotte Slideshow - moved up for better flow */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-              Unsere Flotte in Aktion
-            </h2>
-            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              Moderne Fahrzeuge, geschulte Fahrer und höchste Sicherheitsstandards für Ihren Erfolg.
-            </p>
-            <ImageSlideshow slides={truckSlides} />
-          </div>
-        </div>
-      </section>
-
-      
+            
 
       {/* Über uns - moved after safety video */}
       <section className="py-16 bg-gray-50">
@@ -204,7 +188,7 @@ export default function Home() {
               <div>
                 <h2 className="text-4xl font-bold mb-6 text-gray-800">Über TSL GmbH</h2>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  <strong>20+ Jahre Erfahrung</strong> in der Logistikbranche. Unser Team von 65 Spezialisten arbeitet täglich daran, Ihre Erwartungen zu übertreffen.
+                  <strong>30+ Jahre Erfahrung</strong> in der Logistikbranche. Unser Team von 65 Spezialisten arbeitet täglich daran, Ihre Erwartungen zu übertreffen.
                 </p>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                   Mit Standorten in ganz Deutschland sind wir optimal positioniert für <strong>schnelle und effiziente Lieferungen</strong>. Unsere moderne Flotte und individuellen Software-Lösungen meistern auch komplexeste Herausforderungen.
@@ -288,6 +272,22 @@ export default function Home() {
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
             Lassen Sie uns gemeinsam Ihre Logistik optimieren. Kostenlose Erstberatung und maßgeschneiderte Lösungen für Ihr Unternehmen.
           </p>
+
+          {/* Google Map (Footer) */}
+          <div className="mt-8 mb-8">
+            <div className="mx-auto bg-gray-800/60 rounded-lg overflow-hidden shadow-inner w-full">
+              <div className="relative w-full h-48 md:h-64">
+                <iframe
+                  title="TSL GmbH Standort"
+                  className="absolute inset-0 w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=Am%20Sportplatz%201%2C%2064823%20Gro%C3%9F-Umstadt%20Richen%2C%20Deutschland&output=embed"
+                />
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"

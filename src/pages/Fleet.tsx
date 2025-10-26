@@ -1,5 +1,6 @@
-import { Truck, Gauge, Weight, Thermometer, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Truck, Gauge, Weight, Thermometer, CheckCircle } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import ImageSlideshow from '../components/ImageSlideshow';
 
 // Local animated ProgressBar for the Fuhrpark page
 function ProgressBar({ label, value, barClass }: { label: string; value: number; barClass: string }) {
@@ -61,46 +62,28 @@ function ProgressBar({ label, value, barClass }: { label: string; value: number;
 }
 
 export default function Fleet() {
-  // Gallery images - add more truck images here
-  const galleryImages = [
-    '/fuhrpark/truck1.jpg',
-    '/fuhrpark/truck2.jpg',
-    '/fuhrpark/truck3.jpg',
-    '/fuhrpark/truck4.jpg',
-    '/fuhrpark/truck5.jpg',
-    '/fuhrpark/truck6.jpg',
-    '/fuhrpark/truck7.jpg',
-    '/fuhrpark/truck8.jpg',
-    '/fuhrpark/truck9.jpg',
-    '/fuhrpark/truck10.jpg',
-    '/fuhrpark/truck11.jpg',
-    '/fuhrpark/truck12.jpg',
-    '/fuhrpark/truck13.jpg',
-    '/fuhrpark/truck14.jpg',
-    '/fuhrpark/truck15.jpg',
-    '/fuhrpark/truck16.jpg',
-    '/fuhrpark/truck17.jpg',
-    '/fuhrpark/truck18.jpg',
-    '/fuhrpark/truck19.jpg',
+  // Gallery slides for ImageSlideshow component
+  const truckSlides = [
+    { image: '/fuhrpark/truck1.jpg', title: 'Moderne Kühlfahrzeuge', description: 'Temperaturgeführte Transporte von -20°C bis +20°C' },
+    { image: '/fuhrpark/truck2.jpg', title: 'Standard-LKW Flotte', description: 'Bis zu 40t Nutzlast für alle Transportbedürfnisse' },
+    { image: '/fuhrpark/truck3.jpg', title: 'Sattelzüge', description: 'Optimiert für Langstrecken und Wechselbrücken-System' },
+    { image: '/fuhrpark/truck4.jpg', title: 'City-Transporter', description: 'Flexible Lösungen für urbane Logistik' },
+    { image: '/fuhrpark/truck5.jpg', title: 'Doppeldecker-Auflieger', description: 'Bis zu 55% mehr Ladevolumen pro Fahrt' },
+    { image: '/fuhrpark/truck6.jpg', title: 'GPS-Tracking', description: 'Lückenlose Sendungsverfolgung in Echtzeit' },
+    { image: '/fuhrpark/truck7.jpg', title: 'Moderne Technologie', description: 'Telematik-Systeme für optimierte Routen' },
+    { image: '/fuhrpark/truck8.jpg', title: 'Sicherheit First', description: 'TÜV-geprüft und regelmäßig gewartet' },
+    { image: '/fuhrpark/truck9.jpg', title: 'Umweltstandards', description: 'Euro 6 Norm für reduzierten CO₂-Ausstoß' },
+    { image: '/fuhrpark/truck10.jpg', title: 'Ladebordwände', description: 'Effizientes Be- und Entladen' },
+    { image: '/fuhrpark/truck11.jpg', title: 'Lang-Auflieger', description: 'Bis zu 37 Europaletten-Stellplätze' },
+    { image: '/fuhrpark/truck12.jpg', title: 'Hydraulische Systeme', description: 'Bär-Lift für schwere Lasten bis 3,2t' },
+    { image: '/fuhrpark/truck13.jpg', title: 'Professionelle Fahrer', description: 'Geschult und zertifiziert' },
+    { image: '/fuhrpark/truck14.jpg', title: 'Deutschlandweit', description: '5+ Standorte für schnelle Lieferungen' },
+    { image: '/fuhrpark/truck15.jpg', title: 'Express-Service', description: 'Schnelle Lieferungen wenn es eilig ist' },
+    { image: '/fuhrpark/truck16.jpg', title: 'Kühlkette garantiert', description: 'Durchgehende Temperaturüberwachung' },
+    { image: '/fuhrpark/truck17.jpg', title: 'Flexible Lösungen', description: 'Maßgeschneidert für Ihre Anforderungen' },
+    { image: '/fuhrpark/truck18.jpg', title: 'Zuverlässig', description: '30+ Jahre Erfahrung in der Logistik' },
+    { image: '/fuhrpark/truck19.jpg', title: 'Partnerschaft', description: 'Ihr vertrauensvoller Logistikpartner' },
   ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  // Auto-advance slideshow every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [galleryImages.length]);
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
-  };
-
-  const previousImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
-  };
 
   const vehicles = [
     {
@@ -152,7 +135,7 @@ export default function Fleet() {
         </div>
       </section>
 
-      {/* TSL IN ZAHLEN - Progress Bars (Fuhrpark) */}
+      {/* TSL IN ZAHLEN - Progress Bars (Fuhrpark) 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-extrabold text-center text-gray-900 tracking-wide">
@@ -170,6 +153,7 @@ export default function Fleet() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Fleet Overview Section */}
       <section className="py-16 bg-white">
@@ -217,63 +201,13 @@ export default function Fleet() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4 text-gray-800 text-center">Unsere Flotte in Bildern</h2>
-            <p className="text-lg text-gray-600 text-center mb-12">
-              Werfen Sie einen Blick auf unsere modernen Fahrzeuge
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+              Unsere Flotte in Bildern
+            </h2>
+            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+              Werfen Sie einen Blick auf unsere modernen Fahrzeuge und innovative Technologie
             </p>
-
-            {/* Main Slideshow */}
-            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden mb-6">
-              <div className="relative h-[500px] md:h-[600px]">
-                <img
-                  src={galleryImages[currentImageIndex]}
-                  alt={`TSL Truck ${currentImageIndex + 1}`}
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Navigation Arrows */}
-                <button
-                  onClick={previousImage}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-colors"
-                  aria-label="Vorheriges Bild"
-                >
-                  <ChevronLeft size={32} />
-                </button>
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-colors"
-                  aria-label="Nächstes Bild"
-                >
-                  <ChevronRight size={32} />
-                </button>
-
-                {/* Image Counter */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full text-sm">
-                  {currentImageIndex + 1} / {galleryImages.length}
-                </div>
-              </div>
-            </div>
-
-            {/* Thumbnail Navigation - Disabled */}
-            {/* <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-              {galleryImages.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToImage(index)}
-                  className={`relative aspect-video rounded-lg overflow-hidden transition-all ${
-                    index === currentImageIndex
-                      ? 'ring-4 ring-gray-700 scale-105'
-                      : 'opacity-60 hover:opacity-100'
-                  }`}
-                >
-                  <img
-                    src={image}
-                    alt={`Thumbnail ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
-            </div> */}
+            <ImageSlideshow slides={truckSlides} />
           </div>
         </div>
       </section>
