@@ -3,8 +3,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Slide {
   image: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }
 
 interface ImageSlideshowProps {
