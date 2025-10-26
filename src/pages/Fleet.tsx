@@ -1,116 +1,10 @@
-import { Truck, Gauge, Weight, Thermometer, CheckCircle } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
 import ImageSlideshow from '../components/ImageSlideshow';
+import { vehicles, truckSlides } from '../data/fleetData';
+import { CheckCircle } from 'lucide-react';
 
-// Local animated ProgressBar for the Fuhrpark page
-function ProgressBar({ label, value, barClass }: { label: string; value: number; barClass: string }) {
-  const [inView, setInView] = useState(false);
-  const [display, setDisplay] = useState(0);
-  const ref = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            setInView(true);
-            obs.disconnect();
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!inView) return;
-    let raf = 0;
-    const duration = 800;
-    const start = performance.now();
-    const animate = (t: number) => {
-      const p = Math.min(1, (t - start) / duration);
-      const next = Math.round(value * p * 10) / 10;
-      setDisplay(next);
-      if (p < 1) raf = requestAnimationFrame(animate);
-    };
-    raf = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(raf);
-  }, [inView, value]);
-
-  const widthStyle = { width: `${inView ? value : 0}%` } as const;
-
-  return (
-    <div ref={ref} className="space-y-2">
-      <div className="flex items-center justify-between text-sm md:text-base text-gray-800">
-        <span>{label}</span>
-      </div>
-      <div className="relative w-full bg-gray-200/80 rounded-full h-4 overflow-hidden">
-        <div className={`${barClass} h-4 rounded-full transition-[width] duration-700 ease-out`} style={widthStyle} />
-        <span
-          className="absolute -translate-x-1/2 -top-7 md:-top-8 text-xs font-semibold text-white px-2 py-0.5 rounded shadow-sm bg-gray-900"
-          style={{ left: `${inView ? value : 0}%` }}
-        >
-          {display}%
-        </span>
-      </div>
-    </div>
-  );
-}
 
 export default function Fleet() {
   // Gallery slides for ImageSlideshow component
-  const truckSlides = [
-    { image: '/fuhrpark/truck1.jpg', title: 'Moderne Kühlfahrzeuge', description: 'Temperaturgeführte Transporte von -20°C bis +20°C' },
-    { image: '/fuhrpark/truck2.jpg', title: 'Sattelzüge', description: 'Optimiert für Langstrecken und Wechselbrücken-System' },
-    { image: '/fuhrpark/truck3.jpg', title: 'Professionelle Fahrer', description: 'Geschult und zertifiziert' },
-    { image: '/fuhrpark/truck4.jpg', title: 'Tägliche Transporter', description: 'Flexible Lösungen für urbane Logistik' },
-    { image: '/fuhrpark/truck5.jpg', title: 'Doppeldecker-Auflieger', description: 'Bis zu 55% mehr Ladevolumen pro Fahrt' },
-    { image: '/fuhrpark/truck6.jpg', title: 'GPS-Tracking', description: 'Lückenlose Sendungsverfolgung in Echtzeit' },
-    { image: '/fuhrpark/truck7.jpg', title: 'Moderne Technologie', description: 'Telematik-Systeme für optimierte Routen' },
-    { image: '/fuhrpark/truck8.jpg', title: 'Sicherheit First', description: 'TÜV-geprüft und regelmäßig gewartet' },
-    { image: '/fuhrpark/truck9.jpg', title: 'Umweltstandards', description: 'Euro 6 Norm für reduzierten CO₂-Ausstoß' },
-    { image: '/fuhrpark/truck10.jpg', title: 'Ladebordwände', description: 'Effizientes Be- und Entladen' },
-    { image: '/fuhrpark/truck11.jpg', title: 'Lang-Auflieger', description: 'Bis zu 37 Europaletten-Stellplätze' },
-    { image: '/fuhrpark/truck12.jpg', title: 'Große Lage Fläche', description: 'Große Lagerflächen für schnelle Lieferungen' },
-    { image: '/fuhrpark/truck13.jpg', title: 'Lang-Auflieger', description: 'Bis zu 37 Europaletten-Stellplätze' },
-    { image: '/fuhrpark/truck14.jpg', title: 'Deutschlandweit', description: '5+ Standorte für schnelle Lieferungen' },
-    { image: '/fuhrpark/truck15.jpg', title: 'Optimale Tourenplanung', description: 'Optimale Tourenplanung für Ihre Anforderungen' },
-    { image: '/fuhrpark/truck16.jpg', title: 'Kühlkette garantiert', description: 'Durchgehende Temperaturüberwachung' },
-    { image: '/fuhrpark/truck17.jpg', title: 'Flexible Lösungen', description: 'Maßgeschneidert für Ihre Anforderungen' },
-    { image: '/fuhrpark/truck18.jpg', title: 'Zuverlässig', description: '30+ Jahre Erfahrung in der Logistik' },
-    { image: '/fuhrpark/truck19.jpg', title: 'Express-Service', description: 'Schnelle Lieferungen wenn es eilig ist' },
-  ];
-
-  const vehicles = [
-    {
-      type: 'Kühl-LKW',
-      count: 15,
-      icon: Thermometer,
-      specs: ['7,5t - 12t Nutzlast', 'Temperaturbereich -20°C bis +20°C', 'Durchgehende Kühlkette'],
-    },
-    {
-      type: 'Standard-LKW',
-      count: 20,
-      icon: Truck,
-      specs: ['12t - 40t Nutzlast', 'Ladebordwand', 'Bis zu 37 Europaletten-Stellplätze'],
-    },
-    {
-      type: 'Sattelzug',
-      count: 10,
-      icon: Weight,
-      specs: ['Bis 40t Nutzlast', 'Wechselbrücken-System', 'Langstrecke optimiert'],
-    },
-    {
-      type: 'Transporter',
-      count: 5,
-      icon: Gauge,
-      specs: ['Bis 3,5t Nutzlast', 'City-Logistik', 'Express-Lieferungen'],
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -134,26 +28,6 @@ export default function Fleet() {
           </div>
         </div>
       </section>
-
-      {/* TSL IN ZAHLEN - Progress Bars (Fuhrpark) 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-center text-gray-900 tracking-wide">
-            TSL IN ZAHLEN
-          </h2>
-          <div className="w-40 h-1 mx-auto mt-4 mb-10 border-b-4 border-dotted border-blue-600" />
-
-          <div className="bg-white/80 backdrop-blur rounded-2xl p-6 md:p-8 border border-gray-200 shadow-lg">
-            <div className="grid md:grid-cols-2 gap-6">
-              <ProgressBar label="Umwelt - Einsparung CO₂-Ausstoß" value={20} barClass="bg-gradient-to-r from-emerald-600 to-green-500" />
-              <ProgressBar label="Umwelt- Einsparung Kraftstoff" value={35} barClass="bg-gradient-to-r from-cyan-600 to-sky-500" />
-              <ProgressBar label="Steigerung Umsatz gegenüber Vorjahr" value={15.3} barClass="bg-gradient-to-r from-amber-600 to-yellow-500" />
-              <ProgressBar label="Steigerung Transportleistung" value={45} barClass="bg-gradient-to-r from-rose-600 to-red-500" />
-            </div>
-          </div>
-        </div>
-      </section>
-      */}
 
       {/* Fleet Overview Section */}
       <section className="py-16 bg-white">

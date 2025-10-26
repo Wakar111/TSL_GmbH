@@ -1,51 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { X, Play } from "lucide-react";
+import { employees } from "../data/employeeData";
 
-interface TestimonialData {
-  imgUrl?: string;
-  testimonial: string;
-  author: string;
-  videoUrl?: string;
-}
 
-const DragShuffleHero = () => {
-  // Define your testimonials here - add or remove as many as you want!
-  const testimonials: TestimonialData[] = [
-    {
-      imgUrl: "/optimized/felix.jpg",
-      testimonial: "Bei TSL erwartet dich ein familiäres Arbeitsumfeld, das offen für Neues und Veränderungen ist.",
-      author: "Felix F. - Prokurist",
-      videoUrl: "/optimized/jobs_videos/felix.mp4"
-    },
-    {
-      imgUrl: "/optimized/anni.jpg",
-      testimonial: "Bei der TSL stellen wir uns regelmäßig neuen Herausforderungen – Abwechslung ist somit garantiert.",
-      author: "Anni Q. - Disponentin",
-      videoUrl: "/optimized/jobs_videos/anni.mp4"
-    },
-    {
-      imgUrl: "/optimized/ingo.jpg",
-      testimonial: "TSL überzeugt mit flexiblen Arbeitszeiten und einer offenen, partnerschaftlichen Zusammenarbeit mit den Kunden.",
-      author: "Ingo F. - Disponent",
-      videoUrl: "/optimized/jobs_videos/ingo.mp4"
-    },
-    {
-      imgUrl: "/optimized/celine.jpg",
-      testimonial: "Bei TSL erwarten dich eine tolle Stimmung, klare Aufgabenstrukturen und verlässliche Kolleginnen und Kollegen.",
-      author: "Celine D. - Kaufmännische Angestelltin",
-      videoUrl: "/optimized/jobs_videos/celine.mp4"
-    },
-    {
-      imgUrl: "/optimized/christoph.jpg",
-      testimonial: "Offene Kommunikation und ein flexibles Arbeitsumfeld sorgen dafür, dass jeder Tag neue Herausforderungen bereithält.",
-      author: "Christoph I. - Fuhrpark Mitarbeiter",
-      videoUrl: "/optimized/jobs_videos/christoph.mp4"
-    }
-  ];
+const DragShuffleHero = () => { 
 
   const [order, setOrder] = useState<number[]>(
-    Array.from({ length: testimonials.length }, (_, i) => i)
+    Array.from({ length: employees.length }, (_, i) => i)
   );
 
   const [videoPopup, setVideoPopup] = useState<string | null>(null);
@@ -78,16 +40,16 @@ const DragShuffleHero = () => {
             </p>
           </div>
           <div className="relative h-[450px] w-[350px]">
-            {testimonials.map((testimonial, index) => (
+            {employees.map((employee, index) => (
               <Card
                 key={index}
-                imgUrl={testimonial.imgUrl}
-                testimonial={testimonial.testimonial}
-                author={testimonial.author}
-                videoUrl={testimonial.videoUrl}
+                imgUrl={employee.imgUrl}
+                testimonial={employee.testimonial}
+                author={employee.author}
+                videoUrl={employee.videoUrl}
                 handleShuffle={handleShuffle}
                 position={order.indexOf(index)}
-                totalCards={testimonials.length}
+                totalCards={employees.length}
                 onVideoClick={setVideoPopup}
               />
             ))}
