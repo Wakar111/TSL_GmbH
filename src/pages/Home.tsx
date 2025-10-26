@@ -63,7 +63,7 @@ export default function Home() {
           100% { transform: translateX(-50%); }
         }
       `}</style>
-      <section className="relative text-white py-20 overflow-hidden">
+      <section className="relative text-white py-16 sm:py-24 md:py-32 overflow-hidden min-h-[60vh] md:min-h-[70vh]">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src="/Hero-Section.mp4"
@@ -73,12 +73,12 @@ export default function Home() {
           playsInline
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="relative container mx-auto px-4 flex items-center min-h-[60vh] md:min-h-[70vh]">
+          <div className="max-w-3xl text-center md:text-left mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Ihr Partner für Transport & Logistik
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">
+            <p className="text-lg md:text-2xl mb-8 text-gray-200">
               Mit 140 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
             </p>
             <a
@@ -91,28 +91,36 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="p-6">
-              <Users className="w-12 h-12 mx-auto mb-4 text-gray-700" />
-              <h3 className="text-3xl font-bold text-gray-800 mb-2">140</h3>
-              <p className="text-gray-600">Mitarbeiter</p>
+          <div className="flex md:grid md:grid-cols-4 md:gap-8 gap-6 overflow-x-auto no-scrollbar justify-center">
+            <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
+              <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
+                <Users className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">140</h3>
+              <p className="text-sm md:text-base text-gray-600">Mitarbeiter</p>
             </div>
-            <div className="p-6">
-              <Truck className="w-12 h-12 mx-auto mb-4 text-gray-700" />
-              <h3 className="text-3xl font-bold text-gray-800 mb-2">50+</h3>
-              <p className="text-gray-600">Fahrzeuge</p>
+            <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
+              <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
+                <Truck className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">50+</h3>
+              <p className="text-sm md:text-base text-gray-600">Fahrzeuge</p>
             </div>
-            <div className="p-6">
-              <MapPin className="w-12 h-12 mx-auto mb-4 text-gray-700" />
-              <h3 className="text-3xl font-bold text-gray-800 mb-2">5+</h3>
-              <p className="text-gray-600">Standorte</p>
+            <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
+              <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
+                <MapPin className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">5+</h3>
+              <p className="text-sm md:text-base text-gray-600">Standorte</p>
             </div>
-            <div className="p-6">
-              <Award className="w-12 h-12 mx-auto mb-4 text-gray-700" />
-              <h3 className="text-3xl font-bold text-gray-800 mb-2">20+</h3>
-              <p className="text-gray-600">Jahre Erfahrung</p>
+            <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
+              <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
+                <Award className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">20+</h3>
+              <p className="text-sm md:text-base text-gray-600">Jahre Erfahrung</p>
             </div>
           </div>
         </div>
@@ -120,10 +128,6 @@ export default function Home() {
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">Über uns</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            TSL GmbH ist Ihr zuverlässiger Partner für professionelle Logistiklösungen in ganz Deutschland
-          </p>
           <div className="max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -174,7 +178,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* Flotte Slideshow - moved up for better flow */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">

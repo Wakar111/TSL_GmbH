@@ -79,6 +79,21 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Google Map (Footer) */}
+        <div className="mt-8 mb-8">
+          <div className="mx-auto bg-gray-800/60 rounded-lg overflow-hidden shadow-inner w-full">
+            <div className="relative w-full h-48 md:h-64">
+              <iframe
+                title="TSL GmbH Standort"
+                className="absolute inset-0 w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Am%20Sportplatz%201%2C%2064823%20Gro%C3%9F-Umstadt%20Richen%2C%20Deutschland&output=embed"
+              />
+            </div>
+          </div>
+        </div>
+
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
             © 2025 TSL GmbH. Alle Rechte vorbehalten.
