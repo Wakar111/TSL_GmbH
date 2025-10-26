@@ -26,10 +26,10 @@ export default function Jobs() {
               
               <div className="rounded-xl overflow-hidden shadow-2xl">
                 <video
-                  src="/optimized/jobs_videos/hr_videos/hr-video.mp4"
+                  src="/tsl-employees/jobs_videos/hr-video.mp4"
                   controls
                   className="w-full"
-                  poster="/trucks-hiring.jpg"
+                  poster="/tsl-logo.jpg"
                 >
                   Ihr Browser unterstützt das Video-Element nicht.
                 </video>
