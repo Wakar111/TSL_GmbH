@@ -216,8 +216,8 @@ export default function Home() {
 
       <section id="contact" className="py-20 bg-gradient-to-r from-gray-800 to-gray-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Starten Sie jetzt durch!</h2>
-          <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-5xl font-bold mb-6">Starten Sie jetzt durch!</h2>
+          <p className="text-base md:text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
             Lassen Sie uns gemeinsam Ihre Logistik optimieren. Kostenlose Erstberatung und maßgeschneiderte Lösungen für Ihr Unternehmen.
           </p>
 
@@ -239,13 +239,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
-              className="inline-block bg-white text-gray-800 font-bold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors text-base md:text-lg shadow-lg"
+              className="inline-block w-full sm:w-auto bg-white text-gray-800 font-bold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-gray-100 transition-colors text-base md:text-lg shadow-lg"
             >
               📞 Kostenlose Beratung anfragen
             </a>
             <a
               href="tel:+49123456789"
-              className="inline-block border-2 border-white text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-white hover:text-gray-800 transition-colors text-base md:text-lg"
+              className="inline-block w-full sm:w-auto border-2 border-white text-white font-semibold px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-white hover:text-gray-800 transition-colors text-base md:text-lg"
             >
               Sofort anrufen
             </a>

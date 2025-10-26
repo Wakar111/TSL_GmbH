@@ -16,19 +16,19 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-r from-gray-800 to-gray-700 text-white py-16">
+      <section className="bg-gradient-to-r from-gray-800 to-gray-700 text-white py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Kontakt</h1>
-          <p className="text-xl text-gray-300">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">Kontakt</h1>
+          <p className="text-base md:text-xl text-gray-300 text-center md:text-left">
             Wir freuen uns auf Ihre Nachricht
           </p>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Unsere Ansprechpartner</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-800">Unsere Ansprechpartner</h2>
             
             <div className="space-y-8">
               {departments.map((department, deptIndex) => (
@@ -37,7 +37,7 @@ export default function Contact() {
                     onClick={() => toggleSection(deptIndex)}
                     className="w-full bg-gray-700 px-6 py-4 flex items-center justify-between hover:bg-gray-600 transition-colors"
                   >
-                    <h3 className="text-2xl font-bold text-white">{department.title}</h3>
+                    <h3 className="text-lg md:text-2xl font-bold text-white">{department.title}</h3>
                     <ChevronDown 
                       size={28} 
                       className={`text-white transition-transform duration-300 ${
