@@ -38,8 +38,12 @@ export default function Header() {
   return (
     <>
       <nav className="bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/80 border-b border-gray-200 sticky top-0 z-[100]">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <NavLeft />
+        <div className="container mx-auto px-4 h-24 md:h-20 flex items-center justify-between relative">
+          <div className="hidden lg:block">
+            <NavLeft />
+          </div>
+          {/* Centered logo on mobile */}
+          <MobileLogo />
           <div className="flex items-center gap-4">
             <NavLinksRight navLinks={navLinks} isActive={isActive} />
             <motion.button
@@ -62,11 +66,24 @@ export default function Header() {
 const Logo = () => {
   return (
     <Link to="/" className="flex items-center">
-      <img src="/tsl-logo.jpg" alt="TSL Logo" className="w-20 h-20" />
+      <img src="/logo-blau.png" alt="TSL Logo" className="w-20 h-20" />
       <div className="ml-2">
         <h1 className="text-lg font-bold text-gray-800">TSL GmbH</h1>
         {/* <p className="text-xs text-gray-600">Transport & Logistik</p> */}
       </div>
+    </Link>
+  );
+};
+
+// Mobile-only centered logo (image only)
+const MobileLogo = () => {
+  return (
+    <Link
+      to="/"
+      className="lg:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center"
+      aria-label="Zur Startseite"
+    >
+      <img src="/logo-blau.png" alt="TSL Logo" className="h-[130px] w-auto object-contain" />
     </Link>
   );
 };

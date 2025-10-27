@@ -9,17 +9,17 @@ export default function Jobs() {
 
 
       {/* Main Content Section - Video & Application */}
-      <section className="py-16 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto items-start">
             
             {/* Left Side - HR Video */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center md:text-left">
                   Lernen Sie uns kennen
                 </h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-base md:text-lg text-gray-600 mb-6 text-center md:text-left">
                   Erfahren Sie mehr über TSL GmbH und was uns als Arbeitgeber auszeichnet.
                 </p>
               </div>
@@ -36,30 +36,30 @@ export default function Jobs() {
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6 space-y-4">
-                <h3 className="text-xl font-bold text-gray-800 flex items-center gap-2">
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 flex items-center gap-2">
                   <Users className="w-6 h-6 text-gray-700" />
                   Warum TSL GmbH?
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Familiäres Arbeitsumfeld mit flachen Hierarchien</span>
+                    <span className="text-sm md:text-base text-gray-700">Familiäres Arbeitsumfeld mit flachen Hierarchien</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Moderne Flotte und neueste Technologie</span>
+                    <span className="text-sm md:text-base text-gray-700">Moderne Flotte und neueste Technologie</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Flexible Arbeitszeiten und Work-Life-Balance</span>
+                    <span className="text-sm md:text-base text-gray-700">Flexible Arbeitszeiten und Work-Life-Balance</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Vielfältige Entwicklungsmöglichkeiten</span>
+                    <span className="text-sm md:text-base text-gray-700">Vielfältige Entwicklungsmöglichkeiten</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Über 20 Jahre Erfahrung in der Logistikbranche</span>
+                    <span className="text-sm md:text-base text-gray-700">Über 20 Jahre Erfahrung in der Logistikbranche</span>
                   </li>
                 </ul>
               </div>
@@ -68,34 +68,34 @@ export default function Jobs() {
             {/* Right Side - Application Info */}
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-gray-800 to-gray-700 text-white rounded-xl p-8 shadow-xl">
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-3 mb-6 justify-center md:justify-start">
                   <FileText className="w-8 h-8" />
-                  <h2 className="text-3xl font-bold">Initiativbewerbung</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold">Initiativbewerbung</h2>
                 </div>
                 
-                <p className="text-gray-200 mb-8 text-lg leading-relaxed">
+                <p className="text-gray-200 mb-8 text-base md:text-lg leading-relaxed text-center md:text-left">
                   Sie haben Ihre Traumstelle nicht gefunden? Kein Problem! Wir freuen uns über Ihre 
                   Initiativbewerbung und lernen Sie gerne kennen.
                 </p>
 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                    <h3 className="text-lg md:text-xl font-semibold mb-4 flex items-center gap-2 justify-center md:justify-start">
                       <Send className="w-5 h-5" />
                       So bewerben Sie sich:
                     </h3>
                     <ol className="space-y-3 text-gray-200">
                       <li className="flex items-start gap-3">
                         <span className="bg-white text-gray-800 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
-                        <span>Bereiten Sie Ihre Bewerbungsunterlagen vor (Lebenslauf, Anschreiben, Zeugnisse)</span>
+                        <span className="text-sm md:text-base">Bereiten Sie Ihre Bewerbungsunterlagen vor (Lebenslauf, Anschreiben, Zeugnisse)</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="bg-white text-gray-800 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
-                        <span>Senden Sie Ihre Bewerbung per E-Mail oder rufen Sie uns an</span>
+                        <span className="text-sm md:text-base">Senden Sie Ihre Bewerbung per E-Mail oder rufen Sie uns an</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="bg-white text-gray-800 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
-                        <span>Wir melden uns zeitnah bei Ihnen für ein persönliches Gespräch</span>
+                        <span className="text-sm md:text-base">Wir melden uns zeitnah bei Ihnen für ein persönliches Gespräch</span>
                       </li>
                     </ol>
                   </div>
@@ -104,7 +104,7 @@ export default function Jobs() {
 
               {/* Contact Information Card */}
               <div className="bg-white border-2 border-gray-200 rounded-xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 text-center md:text-left">
                   Kontaktinformationen
                 </h3>
                 
@@ -117,7 +117,7 @@ export default function Jobs() {
                       <p className="text-sm text-gray-600 mb-1">Telefon</p>
                       <a 
                         href="tel:+4960789356" 
-                        className="text-lg font-semibold text-gray-800 hover:text-gray-600 transition-colors"
+                        className="text-base md:text-lg font-semibold text-gray-800 hover:text-gray-600 transition-colors"
                       >
                         +49 (0) 6078 93560
                       </a>
@@ -132,7 +132,7 @@ export default function Jobs() {
                       <p className="text-sm text-gray-600 mb-1">E-Mail</p>
                       <a 
                         href="mailto:tsl@tsl-gmbh.de" 
-                        className="text-lg font-semibold text-gray-800 hover:text-gray-600 transition-colors break-all"
+                        className="text-base md:text-lg font-semibold text-gray-800 hover:text-gray-600 transition-colors break-all"
                       >
                         tsl@tsl-gmbh.de
                       </a>
@@ -165,13 +165,13 @@ export default function Jobs() {
       </section>
 
       {/* Additional Info Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               Haben Sie Fragen?
             </h2>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-base md:text-lg text-gray-700 mb-8">
               Unser HR-Team steht Ihnen gerne zur Verfügung und beantwortet alle Ihre Fragen 
               rund um Karrieremöglichkeiten bei TSL GmbH.
             </p>
