@@ -1,4 +1,6 @@
-import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { FacebookIcon, InstagramIcon } from './SocialIcons';
+
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -18,7 +20,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200 transition-colors"
               >
-                <Facebook size={32} className="md:w-6 md:h-6" />
+                <FacebookIcon />
               </a>
               <a
                 href="https://www.instagram.com/tslgmbh/"
@@ -26,7 +28,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200 transition-colors"
               >
-                <Instagram size={32} className="md:w-6 md:h-6" />
+                <InstagramIcon />
               </a>
             </div>
           </div>
@@ -38,7 +40,8 @@ export default function Footer() {
                 <MapPin size={24} className="text-gray-300 mt-1 flex-shrink-0 md:w-5 md:h-5" />
                 <p className="text-gray-400">
                   Hauptsitz Deutschland<br />
-                  Groß-Umstadt
+                  Groß-Umstadt<br />
+                  Am Sportplatz 1
                 </p>
               </div>
               <div className="flex items-center space-x-3 justify-center md:justify-start">
@@ -95,7 +98,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200 transition-colors"
               >
-                <Facebook size={28} />
+                <FacebookIcon />
               </a>
               <a
                 href="https://www.instagram.com/tslgmbh/"
@@ -103,28 +106,11 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-200 transition-colors"
               >
-                <Instagram size={28} />
+                <InstagramIcon />
               </a>
             </div>
           </div>
         </div>
-
-        {/* Google Map (Footer) *
-        <div className="mt-8 mb-8">
-          <div className="mx-auto bg-gray-800/60 rounded-lg overflow-hidden shadow-inner w-full">
-            <div className="relative w-full h-48 md:h-64">
-              <iframe
-                title="TSL GmbH Standort"
-                className="absolute inset-0 w-full h-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Am%20Sportplatz%201%2C%2064823%20Gro%C3%9F-Umstadt%20Richen%2C%20Deutschland&output=embed"
-              />
-            </div>
-          </div>
-        </div>
-        */}
-
         
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
