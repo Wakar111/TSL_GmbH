@@ -145,13 +145,9 @@ export default function Privacy() {
                   enthalten keine Viren.
                 </p>
                 <p className="mb-4">
-                  <strong>Konkret setzen wir folgendes Cookie:</strong>
-                </p>
-                <ul className="list-disc list-inside space-y-1 mb-4 ml-4">
-                  <li><strong>cookieConsent</strong> (localStorage): Speichert Ihre Bestätigung des Cookie-Hinweises, um diesen nicht erneut anzuzeigen. Laufzeit: unbegrenzt (bis zur manuellen Löschung durch Sie).</li>
-                </ul>
-                <p className="mb-4">
-                  Wir setzen keine Tracking-, Analyse- oder Marketing-Cookies ein.
+                  Die meisten der von uns verwendeten Cookies sind so genannte "Session-Cookies". Sie werden nach Ende
+                  Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert bis Sie
+                  diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.
                 </p>
                 <p className="mb-4">
                   Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und
