@@ -61,7 +61,7 @@ export default function Privacy() {
                 <h3 className="font-semibold text-lg mb-3 mt-6">Wofür nutzen wir Ihre Daten?</h3>
                 <p className="mb-4">
                   Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten.
-                  Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
+                  Wir setzen auf unserer Website keine Reichweiten‑, Tracking‑ oder Marketinganalyse ein.
                 </p>
 
                 <h3 className="font-semibold text-lg mb-3 mt-6">Welche Rechte haben Sie bezüglich Ihrer Daten?</h3>
@@ -84,9 +84,16 @@ export default function Privacy() {
                   sowie dieser Datenschutzerklärung.
                 </p>
                 <p className="mb-4">
-                  Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Die vorliegende
-                  Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch,
-                  wie und zu welchem Zweck das geschieht.
+                  Beim Besuch unserer Website werden automatisch technische Daten (z. B. Browsertyp, Betriebssystem,
+                  Uhrzeit des Seitenaufrufs, IP‑Adresse) erhoben, die für Bereitstellung, Sicherheit und Stabilität
+                  der Website erforderlich sind.
+                </p>
+                <p className="mb-4">
+                  Weitere personenbezogene Daten verarbeiten wir nur, wenn Sie uns diese aktiv mitteilen, z. B. im
+                  Rahmen einer Kontaktaufnahme per E‑Mail.
+                </p>
+                <p className="mb-4">
+                  Wir setzen keine Reichweiten‑, Tracking‑ oder Marketinganalysetools ein.
                 </p>
                 <p className="mb-4">
                   Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail)
@@ -132,15 +139,19 @@ export default function Privacy() {
                 
                 <h3 className="font-semibold text-lg mb-3">Cookies</h3>
                 <p className="mb-4">
-                  Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner
-                  keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher,
-                  effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt
-                  werden und die Ihr Browser speichert.
+                  Unsere Website verwendet ausschließlich technisch notwendige Cookies. Diese dienen dazu, die
+                  grundlegende Funktionalität der Website sicherzustellen. Cookies sind kleine Textdateien, die auf
+                  Ihrem Rechner abgelegt werden und die Ihr Browser speichert. Sie richten keinen Schaden an und
+                  enthalten keine Viren.
                 </p>
                 <p className="mb-4">
-                  Die meisten der von uns verwendeten Cookies sind so genannte "Session-Cookies". Sie werden nach Ende
-                  Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert bis Sie
-                  diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen.
+                  <strong>Konkret setzen wir folgendes Cookie:</strong>
+                </p>
+                <ul className="list-disc list-inside space-y-1 mb-4 ml-4">
+                  <li><strong>cookieConsent</strong> (localStorage): Speichert Ihre Bestätigung des Cookie-Hinweises, um diesen nicht erneut anzuzeigen. Laufzeit: unbegrenzt (bis zur manuellen Löschung durch Sie).</li>
+                </ul>
+                <p className="mb-4">
+                  Wir setzen keine Tracking-, Analyse- oder Marketing-Cookies ein.
                 </p>
                 <p className="mb-4">
                   Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und
