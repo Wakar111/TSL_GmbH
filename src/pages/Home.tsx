@@ -1,5 +1,7 @@
-import { Truck, Users, MapPin, Award, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { partners, servicesList } from '../data/homeData';
+import { CountUpStats } from '../components/CountUpStats';
+import { TiltShineCard } from '../components/TiltShineCard';
 
 export default function Home() {
 
@@ -40,38 +42,7 @@ export default function Home() {
       </section>
 
       <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex md:grid md:grid-cols-4 md:gap-8 gap-6 overflow-x-auto no-scrollbar justify-center">
-            <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
-              <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
-                <Users className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">140+</h3>
-              <p className="text-sm md:text-base text-gray-600">Mitarbeiter</p>
-            </div>
-            <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
-              <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
-                <Truck className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">50+</h3>
-              <p className="text-sm md:text-base text-gray-600">Fahrzeuge</p>
-            </div>
-            <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
-              <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
-                <MapPin className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">5+</h3>
-              <p className="text-sm md:text-base text-gray-600">Standorte</p>
-            </div>
-            <div className="shrink-0 md:shrink md:bg-white md:p-6 md:rounded-xl md:shadow-sm text-center">
-              <div className="hidden md:flex w-16 h-16 mx-auto mb-4 bg-blue-50 rounded-full items-center justify-center">
-                <Award className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-1 md:mb-2">30+</h3>
-              <p className="text-sm md:text-base text-gray-600">Jahre Erfahrung</p>
-            </div>
-          </div>
-        </div>
+        <CountUpStats />
       </section>
 
       <section className="py-16 bg-gray-50">
@@ -221,20 +192,8 @@ export default function Home() {
             Lassen Sie uns gemeinsam Ihre Logistik optimieren. Kostenlose Erstberatung und maßgeschneiderte Lösungen für Ihr Unternehmen.
           </p>
 
-          {/* Google Map (Footer) */}
-          <div className="mt-8 mb-8">
-            <div className="mx-auto bg-gray-800/60 rounded-lg overflow-hidden shadow-inner w-full">
-              <div className="relative w-full h-48 md:h-64">
-                <iframe
-                  title="TSL GmbH Standort"
-                  className="absolute inset-0 w-full h-full border-0"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps?q=Am%20Sportplatz%201%2C%2064823%20Gro%C3%9F-Umstadt%20Richen%2C%20Deutschland&output=embed"
-                />
-              </div>
-            </div>
-          </div>
+          {/* Google Map with Tilt Effect */}
+          <TiltShineCard />
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

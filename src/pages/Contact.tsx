@@ -16,8 +16,14 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-r from-gray-800 to-gray-700 text-white py-12 md:py-16">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-r from-gray-800 to-gray-700 text-white py-20 md:py-32 overflow-hidden">
+        <img
+          src="/contact.jpg"
+          alt="TSL Kontakt"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/40 to-gray-800/40" />
+        <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">Kontakt</h1>
           <p className="text-base md:text-xl text-gray-300 text-center md:text-left">
             Wir freuen uns auf Ihre Nachricht
