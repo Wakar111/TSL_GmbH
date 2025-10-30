@@ -20,6 +20,7 @@ export default function Home() {
           autoPlay
           muted
           loop
+          preload="metadata"
           playsInline
         />
         <div className="absolute inset-0 bg-black/50" />
