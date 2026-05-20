@@ -1,7 +1,9 @@
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, GraduationCap, Briefcase, ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { partners, servicesList } from '../data/homeData';
 import { CountUpStats } from '../components/CountUpStats';
 import { TiltShineCard } from '../components/TiltShineCard';
+import { STELLENANGEBOTE_ENABLED } from '../config/features';
 
 export default function Home() {
 
@@ -41,6 +43,60 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Recruiting Announcement Banner */}
+      {STELLENANGEBOTE_ENABLED && (
+      <section className="py-6 md:py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#0b1a2e] via-[#0f2240] to-[#0b1a2e] shadow-xl hover:shadow-2xl transition-shadow">
+            {/* Decorative gradient blob */}
+            <div className="absolute -top-10 -right-10 w-48 h-48 bg-red-600/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-12 left-1/3 w-56 h-56 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 p-6 md:p-8 text-white">
+              <div className="flex items-start md:items-center gap-4 md:gap-5 flex-1">
+                <div className="hidden sm:flex w-14 h-14 md:w-16 md:h-16 rounded-full bg-red-600 items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-7 h-7 md:w-8 md:h-8" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="inline-flex items-center gap-1.5 bg-red-600 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md tracking-wider">
+                      NEU 2026
+                    </span>
+                    <Link
+                      to="/jobs/ausbildung-2026"
+                      className="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 text-white text-[10px] md:text-xs font-semibold px-2.5 py-1 rounded-md transition-colors"
+                    >
+                      <Briefcase className="w-3 h-3" /> AUSBILDUNG
+                    </Link>
+                    <Link
+                      to="/jobs/duales-studium-2026"
+                      className="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 text-white text-[10px] md:text-xs font-semibold px-2.5 py-1 rounded-md transition-colors"
+                    >
+                      <GraduationCap className="w-3 h-3" /> DUALES STUDIUM
+                    </Link>
+                  </div>
+                  <h3 className="text-lg md:text-2xl font-extrabold leading-tight">
+                    Wir stellen ein! <span className="text-red-400">Neue Stellenangebote 2026</span>
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 mt-1">
+                    Starte deine Karriere bei TSL – Ausbildung &amp; Duales Studium ab 2026 verfügbar.
+                  </p>
+                </div>
+              </div>
+
+              <Link
+                to="/jobs#aktuelle-stellen"
+                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 transition-colors px-5 md:px-6 py-3 rounded-lg font-bold text-sm md:text-base shadow-lg flex-shrink-0"
+              >
+                Jetzt entdecken
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      )}
 
       <section className="py-12 md:py-16 bg-white">
         <CountUpStats />
