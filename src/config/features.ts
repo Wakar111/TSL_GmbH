@@ -7,4 +7,4 @@
 const raw = import.meta.env.VITE_STELLENANGEBOTE as string | undefined;
 
 export const STELLENANGEBOTE_ENABLED: boolean =
-  raw === undefined ? true : raw.toLowerCase() === 'true';
+  raw === undefined ? false : raw.toLowerCase() === 'true';
