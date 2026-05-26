@@ -40,13 +40,13 @@ export default function CareerProgramPage({ data }: Props) {
       {/* Hero */}
       <section className="relative bg-[#0b1a2e] text-white overflow-hidden min-h-[640px] md:min-h-[760px] lg:min-h-[820px] flex items-center">
         <img
-          src="/stellenangebote/two_azubi.png"
+          src={data.heroImage}
           alt="TSL Mitarbeitende"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute right-0 top-0 h-full w-full md:w-[60%] object-cover object-[center_20%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0b1a2e] from-0% via-[#0b1a2e]/80 via-30% to-transparent to-70% md:via-[#0b1a2e]/70 md:via-35%" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0b1a2e] via-[#0b1a2e]/90 to-transparent md:via-[#0b1a2e]/70 md:to-transparent" />
         <div className="relative container mx-auto px-4 py-16 md:py-20 w-full">
-          <div className="max-w-xl">
+          <div className="max-w-sm">
             <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.05] tracking-tight">
               DEINE ZUKUNFT.
               <br />
@@ -104,7 +104,7 @@ export default function CareerProgramPage({ data }: Props) {
           <div className="grid md:grid-cols-2 gap-6 lg:gap-10 items-stretch max-w-6xl mx-auto">
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img
-                src="/stellenangebote/tsl_truck_background.png"
+                src="/stellenangebote/lkw_bei_ausbildung_tsl.png"
                 alt="TSL Truck"
                 className="w-full h-full object-cover"
               />

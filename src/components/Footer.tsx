@@ -50,7 +50,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3 justify-center md:justify-start">
                 <Mail size={24} className="text-gray-300 flex-shrink-0 md:w-5 md:h-5" />
-                <p className="text-gray-400">tsl@tsl-gmbh.de</p>
+                <p className="text-gray-400">info@tsl-gmbh.de</p>
               </div>
             </div>
           </div>

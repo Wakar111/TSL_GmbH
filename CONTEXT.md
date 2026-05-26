@@ -153,7 +153,7 @@ SPA-Fallback via `public/_redirects` für Netlify-ähnliche Hoster.
 
 - Hauptsitz: **Groß-Umstadt, Am Sportplatz 1**.
 - Telefon (Hauptnummer im Code): `+49 6078 93560` bzw. `+49607893560`.
-- E-Mail allgemein: `tsl@tsl-gmbh.de`. Bewerbungen: `bewerbung@tsl-gmbh.de`.
+- E-Mail allgemein: `info@tsl-gmbh.de`. Bewerbungen: `bewerbung@tsl-gmbh.de`.
 - Social: Facebook (`facebook.com/TSL-GmbH-Gro%c3%9f-Umstadt-...`), Instagram (`@tslgmbh`).
 - Disposition Magdeburg + Groß-Umstadt + Außenstelle Dietzenbach (siehe `departmentData.ts`).
 

@@ -32,7 +32,7 @@ export default function Privacy() {
                 <p>Am Sportplatz 1</p>
                 <p>64823 Groß-Umstadt/Richen</p>
                 <p className="mt-3">Telefon: +49 (0) 6078 93560</p>
-                <p>E-Mail: <a href="mailto:tsl@tsl-gmbh.de" className="text-blue-600 hover:underline">tsl@tsl-gmbh.de</a></p>
+                <p>E-Mail: <a href="mailto:info@tsl-gmbh.de" className="text-blue-600 hover:underline">info@tsl-gmbh.de</a></p>
                 <p className="mt-4">
                   Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen
                   über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.

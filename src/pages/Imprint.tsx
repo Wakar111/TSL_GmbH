@@ -29,7 +29,7 @@ export default function Imprint() {
               <div>
                 <h3 className="font-semibold text-lg mb-2">Kontakt</h3>
                 <p>Telefon: <a href="tel:+49607893560">+49 (0) 6078 93560</a></p>
-                <p>E-Mail: <a href="mailto:tsl@tsl-gmbh.de">tsl@tsl-gmbh.de</a></p>
+                <p>E-Mail: <a href="mailto:info@tsl-gmbh.de">info@tsl-gmbh.de</a></p>
               </div>
 
               <div>

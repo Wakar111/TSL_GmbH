@@ -22,6 +22,7 @@ export interface ProgramData {
   heroDescription: string;
   badgeLabel: string;
   badgeValue: string;
+  heroImage: string;
   topFeatures: { icon: LucideIcon; label: string }[];
   showHeaderCta: boolean;
   whyTitlePrefix: string;
@@ -48,6 +49,7 @@ export const ausbildungData: ProgramData = {
     'Starte deine Ausbildung zum 01.09. und werde Teil eines starken Teams in der modernen Transport- und Logistikbranche.',
   badgeLabel: 'AUSBILDUNGSBEGINN',
   badgeValue: '1. SEPTEMBER',
+  heroImage: '/stellenangebote/hero_ausbildung_seite.png',
   topFeatures: [
     { icon: Users, label: 'PRAXISNAH\nARBEITEN' },
     { icon: BarChart3, label: 'ZUKUNFT\nGESTALTEN' },
@@ -124,6 +126,7 @@ export const dualesStudiumData: ProgramData = {
     'Starte mit uns ins Wintersemester 2026 und verbinde Theorie mit echter Praxis in der modernen Transport- und Logistikbranche.',
   badgeLabel: 'STUDIENSTART',
   badgeValue: 'WINTERSEMESTER 2026',
+  heroImage: '/stellenangebote/hero_duales_studium_seite.png',
   topFeatures: [
     { icon: GraduationCap, label: 'PRAKTISCH\nSTUDIEREN' },
     { icon: Truck, label: 'ZUKUNFT\nGESTALTEN' },
