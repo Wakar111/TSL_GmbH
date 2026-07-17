@@ -26,7 +26,7 @@ export default function Contact() {
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">Kontakt</h1>
           <p className="text-base md:text-xl text-gray-300 text-center md:text-left">
-            Wir freuen uns auf Ihre Nachricht
+            Wir freuen uns auf deine Nachricht
           </p>
         </div>
       </section>

@@ -126,7 +126,7 @@ SPA-Fallback via `public/_redirects` für Netlify-ähnliche Hoster.
 
 - **Header** (`Header.tsx`): Sticky (`z-[100]`), Mobile-Menü als animiertes Slide-Down-Panel (`z-[160]`), Body-Scroll-Lock bei offenem Menü, ESC schließt.
 - **CookieBanner**: speichert nur `{ necessary: true }` in `localStorage.cookieConsent` — kein Tracking implementiert. Verlinkt `/privacy`.
-- **CountUpStats**: nutzt `useInView` + `animate()` aus `framer-motion`. Aktuell 140+ Mitarbeiter, 50+ Fahrzeuge, 5+ Standorte, 30+ Jahre.
+- **CountUpStats**: nutzt `useInView` + `animate()` aus `framer-motion`. Aktuell 180+ Mitarbeiter, 1000+ Fahrzeuge, 4+ Standorte, 30+ Jahre.
 - **DragShuffleHero**: Stapel aus `employees`-Karten; Drag>100px → `handleShuffle` rotiert Reihenfolge; Klick auf Play öffnet Video-Modal.
 - **TiltShineCard**: Mouse-Tracking → 3D-Rotation, embedded Google-Maps-iframe (Am Sportplatz 1, 64823 Groß-Umstadt Richen).
 - **ImageSlideshow**: Snap-Scroll-Karussell, Autoplay (5 s), IntersectionObserver pausiert wenn nicht sichtbar.

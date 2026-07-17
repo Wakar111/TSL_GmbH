@@ -13,7 +13,7 @@ export default function CareerProgramPage({ data }: Props) {
       <div className="bg-[#0b1a2e] text-white">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between gap-4">
           <Link to="/jobs" className="text-sm text-gray-300 hover:text-white transition-colors">
-            ← Zurück zu Stellenangeboten
+            ← Zurück zu Karriereseite
           </Link>
           <div className="hidden md:flex items-center gap-8">
             {data.topFeatures.map((f, i) => (

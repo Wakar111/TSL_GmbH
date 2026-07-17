@@ -23,9 +23,10 @@ export default function Jobs() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-              <ProgramCard
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+              <ProgramTile
                 to="/jobs/ausbildung-2026"
+                image="/stellenangebote/hero_ausbildung_seite.png"
                 icon={Briefcase}
                 tag="AUSBILDUNG"
                 title="Ausbildung bei TSL 2026"
@@ -33,8 +34,9 @@ export default function Jobs() {
                 startLabel="Ausbildungsbeginn"
                 startValue="1. September 2026"
               />
-              <ProgramCard
+              <ProgramTile
                 to="/jobs/duales-studium-2026"
+                image="/stellenangebote/hero_duales_studium_seite.png"
                 icon={GraduationCap}
                 tag="DUALES STUDIUM"
                 title="Duales Studium Wintersemester 2026"
@@ -57,10 +59,10 @@ export default function Jobs() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center md:text-left">
-                  Lernen Sie uns kennen
+                  Lern uns kennen
                 </h2>
                 <p className="text-base md:text-lg text-gray-600 mb-6 text-center md:text-left">
-                  Erfahren Sie mehr über TSL GmbH und was uns als Arbeitgeber auszeichnet.
+                  Erfahre mehr über TSL GmbH und was uns als Arbeitgeber auszeichnet.
                 </p>
               </div>
               
@@ -71,7 +73,7 @@ export default function Jobs() {
                   className="w-full"
                   poster="/tsl-logo.jpg"
                 >
-                  Ihr Browser unterstützt das Video-Element nicht.
+                  Dein Browser unterstützt das Video-Element nicht.
                 </video>
               </div>
 
@@ -114,28 +116,28 @@ export default function Jobs() {
                 </div>
                 
                 <p className="text-gray-200 mb-8 text-base md:text-lg leading-relaxed text-center md:text-left">
-                  Sie haben Ihre passende Stelle nicht gefunden? Kein Problem! Wir freuen uns über Ihre 
-                  Initiativbewerbung und lernen Sie gerne kennen.
+                  Du hast deine passende Stelle nicht gefunden? Kein Problem! Wir freuen uns über deine 
+                  Initiativbewerbung und lernen dich gerne kennen.
                 </p>
 
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg md:text-xl font-semibold mb-4 flex items-center gap-2 justify-center md:justify-start">
                       <Send className="w-5 h-5" />
-                      So bewerben Sie sich:
+                      So bewirbst du dich:
                     </h3>
                     <ol className="space-y-3 text-gray-200">
                       <li className="flex items-start gap-3">
                         <span className="bg-white text-gray-800 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
-                        <span className="text-sm md:text-base">Bereiten Sie Ihre Bewerbungsunterlagen vor (Lebenslauf, Anschreiben, Zeugnisse)</span>
+                        <span className="text-sm md:text-base">Bereite deine Bewerbungsunterlagen vor (Lebenslauf, Anschreiben, Zeugnisse)</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="bg-white text-gray-800 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
-                        <span className="text-sm md:text-base">Senden Sie Ihre Bewerbung per E-Mail oder rufen Sie uns an</span>
+                        <span className="text-sm md:text-base">Sende deine Bewerbung per E-Mail oder ruf uns an</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="bg-white text-gray-800 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
-                        <span className="text-sm md:text-base">Wir melden uns zeitnah bei Ihnen für ein persönliches Gespräch</span>
+                        <span className="text-sm md:text-base">Wir melden uns zeitnah bei dir für ein persönliches Gespräch</span>
                       </li>
                     </ol>
                   </div>
@@ -181,10 +183,10 @@ export default function Jobs() {
 
                   <div className="pt-4 border-t border-gray-200">
                     <p className="text-sm text-gray-600 mb-3">
-                      Betreff für Ihre Bewerbung:
+                      Betreff für deine Bewerbung:
                     </p>
                     <p className="font-medium text-gray-800 bg-gray-50 px-4 py-2 rounded-lg">
-                      "Initiativbewerbung - [Ihr Name]"
+                      "Initiativbewerbung - [Dein Name]"
                     </p>
                   </div>
                 </div>
@@ -209,10 +211,10 @@ export default function Jobs() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-              Haben Sie Fragen?
+              Hast du Fragen?
             </h2>
             <p className="text-base md:text-lg text-gray-700 mb-8">
-              Unser HR-Team steht Ihnen gerne zur Verfügung und beantwortet alle Ihre Fragen 
+              Unser HR-Team steht dir gerne zur Verfügung und beantwortet alle deine Fragen 
               rund um Karrieremöglichkeiten bei TSL GmbH.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -238,8 +240,9 @@ export default function Jobs() {
   );
 }
 
-interface ProgramCardProps {
+interface ProgramTileProps {
   to: string;
+  image: string;
   icon: React.ComponentType<{ className?: string }>;
   tag: string;
   title: string;
@@ -248,36 +251,50 @@ interface ProgramCardProps {
   startValue: string;
 }
 
-function ProgramCard({ to, icon: Icon, tag, title, subtitle, startLabel, startValue }: ProgramCardProps) {
+function ProgramTile({ to, image, icon: Icon, tag, title, subtitle, startLabel, startValue }: ProgramTileProps) {
   return (
     <Link
       to={to}
-      className="group relative overflow-hidden rounded-2xl bg-[#0b1a2e] text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1"
+      className="group relative block overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 aspect-[5/4]"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-red-600/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-      <div className="relative p-6 md:p-8 flex flex-col h-full min-h-[280px]">
-        <div className="flex items-center justify-between mb-6">
-          <span className="inline-flex items-center gap-2 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-md tracking-wider">
-            <Icon className="w-4 h-4" />
-            {tag}
-          </span>
-          <span className="text-xs text-gray-400">2026</span>
-        </div>
+      {/* Bild als Kachel-Hintergrund */}
+      <img
+        src={image}
+        alt={title}
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
 
-        <h3 className="text-xl md:text-2xl font-extrabold mb-2 leading-tight">{title}</h3>
-        <p className="text-sm md:text-base text-gray-300 mb-6 flex-grow">{subtitle}</p>
+      {/* Dunkler Verlauf für Lesbarkeit */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0b1a2e] via-[#0b1a2e]/60 to-[#0b1a2e]/10" />
 
-        <div className="flex items-center gap-3 mb-6 text-sm">
-          <CalendarDays className="w-5 h-5 text-red-500 flex-shrink-0" />
-          <div>
-            <div className="text-[11px] uppercase font-semibold text-gray-400">{startLabel}</div>
-            <div className="font-bold">{startValue}</div>
+      {/* Roter Hover-Akzent */}
+      <div className="absolute inset-0 bg-gradient-to-br from-red-600/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+      {/* Tag oben */}
+      <div className="relative z-10 p-4 flex items-start justify-between">
+        <span className="inline-flex items-center gap-1.5 bg-red-600 text-white text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md tracking-wider shadow-lg">
+          <Icon className="w-3.5 h-3.5" />
+          {tag}
+        </span>
+        <span className="text-[10px] font-semibold text-white/80 bg-black/30 backdrop-blur-sm px-2 py-0.5 rounded">2026</span>
+      </div>
+
+      {/* Content unten */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 p-4 text-white">
+        <h3 className="text-base md:text-xl font-extrabold mb-1 leading-tight drop-shadow">{title}</h3>
+        <p className="text-[11px] md:text-xs text-gray-200 mb-3 line-clamp-2">{subtitle}</p>
+
+        <div className="flex items-center gap-2 mb-3 text-sm">
+          <CalendarDays className="w-3.5 h-3.5 text-red-400 flex-shrink-0" />
+          <div className="leading-tight">
+            <div className="text-[9px] uppercase font-semibold text-gray-300">{startLabel}</div>
+            <div className="font-bold text-xs">{startValue}</div>
           </div>
         </div>
 
-        <div className="inline-flex items-center gap-2 text-red-400 group-hover:text-red-300 font-semibold text-sm">
+        <div className="inline-flex items-center gap-1.5 text-white font-semibold text-xs bg-red-600 group-hover:bg-red-700 px-3 py-1.5 rounded-md transition-colors">
           Mehr erfahren
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
         </div>
       </div>
     </Link>

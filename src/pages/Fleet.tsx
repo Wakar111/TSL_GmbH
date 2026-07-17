@@ -22,7 +22,7 @@ export default function Fleet() {
                 Unser Fuhrpark
               </h1>
               <p className="text-base md:text-2xl text-gray-200">
-                Moderne Fahrzeuge für alle Ihre Transportbedürfnisse
+                Moderne Fahrzeuge für alle deine Transportbedürfnisse
               </p>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function Fleet() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-sm md:text-base text-gray-700">Über 50 moderne Fahrzeuge verschiedener Größen</span>
+                    <span className="text-sm md:text-base text-gray-700">Moderne Fahrzeuge in verschiedenen Größen</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
@@ -79,7 +79,7 @@ export default function Fleet() {
               Unsere Flotte in Bildern
             </h2>
             <p className="text-sm md:text-base text-center text-gray-600 mb-6 md:mb-12 max-w-2xl mx-auto">
-              Werfen Sie einen Blick auf unsere modernen Fahrzeuge und innovative Technologie
+              Wirf einen Blick auf unsere modernen Fahrzeuge und innovative Technologie
             </p>
             <ImageSlideshow slides={truckSlides} />
           </div>
@@ -101,7 +101,6 @@ export default function Fleet() {
                   <div className="bg-gray-700 p-6 flex items-center justify-between">
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{vehicle.type}</h3>
-                      <p className="text-gray-300 text-base md:text-lg">{vehicle.count} Fahrzeuge</p>
                     </div>
                     <vehicle.icon className="w-16 h-16 text-white opacity-80" />
                   </div>
@@ -226,7 +225,7 @@ export default function Fleet() {
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   Alle Fahrzeuge sind mit modernster GPS-Technologie und intelligenten Telematik-Systemen ausgestattet. 
                   Dies ermöglicht lückenlose Sendungsverfolgung in Echtzeit, optimierte Routenplanung und maximale 
-                  Kraftstoffeffizienz. Sie wissen jederzeit, wo sich Ihre Sendung befindet.
+                  Kraftstoffeffizienz. Du weißt jederzeit, wo sich deine Sendung befindet.
                 </p>
               </div>
               <div className="bg-gray-50 p-8 rounded-xl shadow-md">
@@ -242,7 +241,7 @@ export default function Fleet() {
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                   Modernste Sicherheitssysteme, regelmäßige Wartungsintervalle und TÜV-geprüfte Fahrzeuge garantieren 
                   maximale Betriebssicherheit. Alle Fahrer sind geschult und zertifiziert für den sicheren Transport 
-                  Ihrer Güter.
+                  deiner Güter.
                 </p>
               </div>
               <div className="bg-gray-50 p-8 rounded-xl shadow-md">

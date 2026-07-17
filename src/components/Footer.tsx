@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <img src="/tsl-logo.jpg" alt="Logo" className="hidden md:block w-24 mb-4 mx-auto md:mx-0" />
             <p className="hidden md:block text-gray-400 mb-4">
-              Ihr zuverlässiger Partner für Transport und Logistik seit über 20 Jahren.
+              Dein zuverlässiger Partner für Transport und Logistik seit über 20 Jahren.
             </p>
             <div className="hidden md:flex space-x-4 justify-center md:justify-start">
               <a
@@ -70,7 +70,7 @@ export default function Footer() {
               </li>
               <li className="hidden md:block">
                 <Link to="/jobs" className="inline-block py-1 text-gray-400 hover:text-gray-200 transition-colors">
-                  Stellenangebote
+                  Karriereseite
                 </Link>
               </li>
               <li>

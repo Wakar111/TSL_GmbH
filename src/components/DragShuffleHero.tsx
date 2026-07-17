@@ -1,8 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { X, Play } from "lucide-react";
 import { employees } from "../data/employeeData";
 
+const AUTO_SWIPE_INTERVAL_MS = 5000;
 
 const DragShuffleHero = () => { 
 
@@ -11,12 +12,30 @@ const DragShuffleHero = () => {
   );
 
   const [videoPopup, setVideoPopup] = useState<string | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const handleShuffle = () => {
-    const orderCopy = [...order];
-    orderCopy.unshift(orderCopy.pop() as number);
-    setOrder(orderCopy);
-  };
+  const handleShuffle = useCallback(() => {
+    setOrder((prev) => {
+      const copy = [...prev];
+      copy.unshift(copy.pop() as number);
+      return copy;
+    });
+  }, []);
+
+  const handleShuffleBack = useCallback(() => {
+    setOrder((prev) => {
+      const copy = [...prev];
+      copy.push(copy.shift() as number);
+      return copy;
+    });
+  }, []);
+
+  // Auto-swipe: alle 5 Sekunden, pausiert bei offenem Video-Popup oder Hover/Drag
+  useEffect(() => {
+    if (videoPopup || isPaused) return;
+    const id = window.setInterval(handleShuffle, AUTO_SWIPE_INTERVAL_MS);
+    return () => window.clearInterval(id);
+  }, [videoPopup, isPaused, handleShuffle, order]);
 
   return (
     <>
@@ -36,10 +55,16 @@ const DragShuffleHero = () => {
               Wir stellen ein!
             </h3>
             <p className="mb-8 mt-4 text-lg text-gray-300">
-              Werden Sie Teil unseres erfolgreichen Teams!
+              Werde Teil unseres erfolgreichen Teams!
             </p>
           </div>
-          <div className="relative h-[450px] w-[350px]">
+          <div
+            className="relative h-[450px] w-[350px]"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+          >
             {employees.map((employee, index) => (
               <Card
                 key={index}
@@ -48,6 +73,7 @@ const DragShuffleHero = () => {
                 author={employee.author}
                 videoUrl={employee.videoUrl}
                 handleShuffle={handleShuffle}
+                handleShuffleBack={handleShuffleBack}
                 position={order.indexOf(index)}
                 totalCards={employees.length}
                 onVideoClick={setVideoPopup}
@@ -72,22 +98,22 @@ const DragShuffleHero = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: "spring", damping: 20 }}
-              className="relative w-full max-w-4xl"
+              className="relative w-full max-w-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setVideoPopup(null)}
-                className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+                className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
               >
-                <X size={32} />
+                <X size={28} />
               </button>
               <video
                 src={videoPopup}
                 controls
                 autoPlay
-                className="w-full rounded-lg shadow-2xl"
+                className="w-full max-h-[80vh] object-contain rounded-lg shadow-2xl bg-black"
               >
-                Ihr Browser unterstützt das Video-Element nicht.
+                Dein Browser unterstützt das Video-Element nicht.
               </video>
             </motion.div>
           </motion.div>
@@ -98,7 +124,8 @@ const DragShuffleHero = () => {
 };
 
 interface CardProps {
-  handleShuffle: Function;
+  handleShuffle: () => void;
+  handleShuffleBack: () => void;
   testimonial: string;
   position: number;
   totalCards: number;
@@ -110,6 +137,7 @@ interface CardProps {
 
 const Card = ({
   handleShuffle,
+  handleShuffleBack,
   testimonial,
   position,
   totalCards,
@@ -132,10 +160,12 @@ const Card = ({
 
     if (diff > 150) {
       handleShuffle();
+    } else if (diff < -150) {
+      handleShuffleBack();
     }
 
     mousePosRef.current = 0;
-    
+
     // Reset drag distance after a short delay
     setTimeout(() => {
       dragDistanceRef.current = 0;

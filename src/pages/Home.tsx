@@ -29,10 +29,10 @@ export default function Home() {
         <div className="relative container mx-auto px-4 flex items-center min-h-[60vh] md:min-h-[70vh]">
           <div className="max-w-3xl text-center md:text-left mx-auto">
             <h1 className="text-3xl md:text-6xl font-bold mb-6">
-              Ihr Partner für Transport & Logistik
+              Dein Partner für Transport & Logistik
             </h1>
             <p className="text-base md:text-2xl mb-8 text-gray-200">
-              Mit über 140 Mitarbeitern und Standorten in ganz Deutschland bieten wir professionelle Logistiklösungen für Ihre Anforderungen.
+              Mit über 180 Mitarbeitern und Standorten in ganz Deutschland bieten wir dir professionelle Logistiklösungen für deine Anforderungen.
             </p>
             <a
               href="/contact"
@@ -107,7 +107,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
               <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-                Mit über 30 Jahren Erfahrung in der Logistikbranche bietet TSL GmbH umfassende Transport- und Logistikdienstleistungen. Unser Team von 140 hochqualifizierten Mitarbeitern arbeitet täglich daran, die Bedürfnisse unserer Kunden zu erfüllen und zu übertreffen.
+                Mit über 30 Jahren Erfahrung in der Logistikbranche bietet TSL GmbH umfassende Transport- und Logistikdienstleistungen. Unser Team von über 180 hochqualifizierten Mitarbeitern arbeitet täglich daran, die Bedürfnisse unserer Kunden zu erfüllen und zu übertreffen.
               </p>
               <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
                 Mit Standorten in mehreren deutschen Städten sind wir optimal positioniert, um schnelle und effiziente Lieferungen in ganz Deutschland und darüber hinaus zu gewährleisten. Unsere moderne Flotte und individuell angepasste Software-Lösungen ermöglichen es uns, auch komplexeste logistische Herausforderungen zu meistern.
@@ -164,7 +164,7 @@ export default function Home() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Über TSL GmbH</h2>
                 <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-                  <strong>30+ Jahre Erfahrung</strong> in der Logistikbranche. Unser Team von 65 Spezialisten arbeitet täglich daran, Ihre Erwartungen zu übertreffen.
+                  <strong>30+ Jahre Erfahrung</strong> in der Logistikbranche. Unser Team von über 180 Spezialisten arbeitet täglich daran, deine Erwartungen zu übertreffen.
                 </p>
                 <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
                   Mit Standorten in ganz Deutschland sind wir optimal positioniert für <strong>schnelle und effiziente Lieferungen</strong>. Unsere moderne Flotte und individuellen Software-Lösungen meistern auch komplexeste Herausforderungen.
@@ -220,7 +220,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Unsere Partner</h2>
           <p className="text-sm md:text-base text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Vertrauen Sie auf bewährte Partnerschaften mit führenden Unternehmen
+            Vertrau auf bewährte Partnerschaften mit führenden Unternehmen
           </p>
           <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <div
@@ -244,9 +244,9 @@ export default function Home() {
 
       <section id="contact" className="py-20 bg-gradient-to-r from-gray-800 to-gray-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-5xl font-bold mb-6">Starten Sie jetzt durch!</h2>
+          <h2 className="text-2xl md:text-5xl font-bold mb-6">Starte jetzt durch!</h2>
           <p className="text-base md:text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Lassen Sie uns gemeinsam Ihre Logistik optimieren. Kostenlose Erstberatung und maßgeschneiderte Lösungen für Ihr Unternehmen.
+            Lass uns gemeinsam deine Logistik optimieren. Kostenlose Erstberatung und maßgeschneiderte Lösungen für dein Unternehmen.
           </p>
 
           {/* Google Map with Tilt Effect */}

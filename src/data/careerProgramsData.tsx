@@ -90,7 +90,7 @@ export const ausbildungData: ProgramData = {
   roleTitle: 'KAUFMANN / FRAU',
   roleSubtitle: 'FÜR SPEDITION UND LOGISTIKDIENSTLEISTUNG (m/w/d)',
   roleDescription:
-    'Du organisierst Transporte, überwachst Sendungen und sorgst dafür, dass Waren pünktlich und sicher ihr Ziel erreichen.',
+    'Du organisierst Transporte, überwachst Sendungen und sorgst dafür, dass Waren pünktlich und sicher ans Ziel kommen.',
   roleBullets: [
     'Kunden beraten und Aufträge abwickeln',
     'Transporte planen und koordinieren',

@@ -7,19 +7,19 @@ export const CountUpStats = () => {
     <div className="container mx-auto px-4">
       <div className="flex flex-col md:grid md:grid-cols-4 gap-6 md:gap-8 items-center justify-center">
         <Stat
-          num={140}
+          num={180}
           suffix="+"
           subheading="Mitarbeiter"
           icon={Users}
         />
         <Stat
-          num={50}
+          num={100}
           suffix="+"
           subheading="Fahrzeuge"
           icon={Truck}
         />
         <Stat
-          num={5}
+          num={4}
           suffix="+"
           subheading="Standorte"
           icon={MapPin}

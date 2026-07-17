@@ -10,7 +10,7 @@ export default function Header() {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/fleet', label: 'Fuhrpark' },
-    { path: '/jobs', label: 'Stellenangebote' },
+    { path: '/jobs', label: 'Karriereseite' },
     { path: '/contact', label: 'Kontakt' },
   ];
 

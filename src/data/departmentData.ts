@@ -23,37 +23,52 @@ export const departments: Department[] = [
     ],
 },
 {
+    title: 'Key Account',
+    people: [
+    { name: 'Tatjana Volke', role: 'Key Account', phone: '06078 935617', email: 'tatjana.volke@tsl-gmbh.de' },
+    ],
+},
+{
     title: 'Disposition Magdeburg',
     people: [
-    { name: 'Enrico Lobenstein', phone: '06078 935665', email: 'enrico.lobenstein@tsl-gmbh.de' },
     { name: 'Melanie Kiesewetter', phone: '06078 935625', email: 'melanie.kiesewetter@tsl-gmbh.de' },
-    { name: 'Andreas Stamer', phone: '0172 6380063', email: 'andreas.stamer@tsl-gmbh.de' },
+    { name: 'Marcus Laue', phone: '06078 955676', email: 'marcus.laue@tsl-gmbh.de' },
     { name: 'Uwe Pohl' }
     ],
 },
 {
     title: 'Disposition Groß-Umstadt',
     people: [
-    { name: 'Tobias Bischoff', role: 'Dispositionsleitung', phone: '06078 935642', email: 'tobias.bischoff@tsl-gmbh.de' },
-    { name: 'Tatjana Volke', phone: '06078 935617', email: 'tatjana.volke@tsl-gmbh.de' },
+    { name: 'Matvei Eidemiller', role: 'Dispositionsleiter', phone: '06078 935654', email: 'matvei.eidemiller@tsl-gmbh.de' },
     { name: 'Anni Torossian', phone: '06078 935644', email: 'anni.torossian@tsl-gmbh.de' },
-    { name: 'Matvei Eidemiller', phone: '06078 935654', email: 'matvei.eidemiller@tsl-gmbh.de' },
     { name: 'Artin Houssepian', phone: '06078 935613', email: 'artin.houssepian@tsl-gmbh.de' },
     { name: 'Tim Kurz', phone: '06078 935669', email: 'tim.kurz@tsl-gmbh.de' },
     { name: 'Edwin de Waal', phone: '06078 935616', email: 'edwin.dewaal@tsl-gmbh.de' },
-    { name: 'Denise Dias', phone: '06078 935689', email: 'denise.dias@tsl-gmbh.de' },
-    { name: 'Lubomir Kostal' }
+    { name: 'Leon Amann', phone: '06078 935656', email: 'leon.amann@tsl-gmbh.de' },
+    { name: 'Andreas Stamer', phone: '0172 6380063', email: 'andreas.stamer@tsl-gmbh.de' }
+    ],
+},
+{
+    title: 'Disposition Dietzenbach',
+    people: [
+    { name: 'Tobias Bischoff', role: 'Dispositionsleiter', phone: '06078 935642', email: 'tobias.bischoff@tsl-gmbh.de' },
+    { name: 'Kevin Baron', phone: '06078 935629', email: 'kevin.baron@tsl-gmbh.de' },
+    { name: 'Ilias Arida', phone: '06078 935619', email: 'ilias.arida@tsl-gmbh.de' },
+    { name: 'Ninus Bahbah', phone: '06078 935615', email: 'ninus.bahbah@tsl-gmbh.de' },
+    { name: 'Ingo Forner', phone: '06078 935658', email: 'ingo.forner@tsl-gmbh.de' },
+    { name: 'Melih Heptazehler', phone: '06078 935675', email: 'melih.heptazehler@tsl-gmbh.de' }
     ],
 },
 {
     title: 'Administrative',
     people: [
-    { name: 'Anita Qamar', role: 'Personal', phone: '060789325646', email: 'anni.qama@tsl-gmbh.de' },
     { name: 'Maximilian Rollmann', role: 'Kaufmännische Leitung Administrative/Palettenverwaltung', phone: '06078115633', email: 'max.rollmann@tsl-gmbh.de' },
-    { name: 'Büsra Öztas', phone: ' 06078 935624', email: 'buesra.oeztas@tsl-gmbh.de' },
     { name: 'Jürgen Grasmück', phone: '06078 935623', email: 'juergen.grasmueck@tsl-gmbh.de' },
     { name: 'Ivone Marques', phone: '06078 935628', email: 'ivone.marques@tsl-gmbh.de' },
     { name: 'Celine Dias', phone: '06078 935652', email: 'celine.dias@tsl-gmbh.de' },
+    { name: 'Anika Ziemer', phone: '06078 935673', email: 'anika.ziemer@tsl-gmbh.de' },
+    { name: 'Patrycja Weigel', phone: '06078 935672', email: 'patrycja.weigel@tsl-gmbh.de' },
+    { name: 'Alexandra Jewlew', phone: '06078 935674', email: 'alexandra.jewlew@tsl-gmbh.de' }
     ],
 },
 {
@@ -70,16 +85,16 @@ export const departments: Department[] = [
     { name: 'Jürgen Eisenmann', role: 'Leitung Fuhrpark', phone: '06078 935664', email: 'juergen.eisenmann@tsl-gmbh.de' },
     { name: 'Christoph Illig', phone: '06078 935653', email: 'christoph.illig@tsl-gmbh.de' },
     { name: 'Jürgen Henke', phone: '06078 935650', email: 'juergen.henke@tsl-gmbh.de' },
-    { name: 'Sergio Fernandes', phone: '06078 935666', email: 'sergio.fernandes@tsl-gmbh.de' }
+    { name: 'Thomas Lachmann', phone: '06078 935678', email: 'thomas.lachmann@tsl-gmbh.de' }
     ],
 },
 {
     title: 'Außenstelle Dietzenbach',
     people: [
-    { name: 'Ninus Bahbah', phone: '06078 935615', email: 'ninus.bahbah@tsl-gmbh.de' },
     { name: 'Maciej Grembowski', phone: '06078 935621', email: 'maciej.grembowski@tsl-gmbh.de' },
-    { name: 'Sarah Stagel', phone: '06078 935655', email: 'sarah.stagel@tsl-gmbh.de' },
-    { name: 'Michael Müller', phone: '06078 935649', email: 'michael.mueller@tsl-gmbh.de' }
+    { name: 'Michael Müller', phone: '06078 935649', email: 'michael.mueller@tsl-gmbh.de' },
+    { name: 'Mandy von Vultée', phone: '06078 935678', email: 'mandy.vonvultee@tsl-gmbh.de' },
+    { name: 'Lubomir Kostal', phone: '06078 935670', email: 'lubomir.kostal@tsl-gmbh.de' }
     ],
 }
 ];
